@@ -1,0 +1,784 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    background-color: #f9f9f9;
+}
+
+.navbar {
+    background-color: transparent;
+    font-family: "Poppins", sans-serif;
+    position: absolute; /* Position navbar absolutely */
+    width: 100%;
+    z-index: 1000; /* Ensure navbar stays on top */
+}
+.navbar-nav {
+    margin: 0 auto;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-nav .nav-link {
+    padding: 8px 16px;   
+     color: black; /* Adjust text color to be darker */
+    font-weight: bold; 
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    font-weight: bold;
+}
+.navbar-brand{
+    margin-right: auto;
+}
+ 
+
+/* Custom CSS for toggler icon */
+.navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="black" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E'); /* Black color for the toggler icon */
+    width: 30px; /* Adjust width as needed */
+    height: 30px; /* Adjust height as needed */
+}
+
+/* Custom CSS for navbar on medium screens */
+@media (max-width: 991px) {
+    .navbar-toggler {
+        background-color: white; /* Background color of the toggler */
+        position: absolute; /* Position the toggler button absolutely */
+        top: 50px   ; /* Align the toggler button to the top of the navbar */
+        right: 45%; /* Center the toggler button horizontally */
+        transform: translateX(50%); /* Center the toggler button horizontally */
+        z-index: 1001; /* Ensure the toggler button stays on top of the navbar */
+    }
+    
+    .login-btn {
+        position: absolute; /* Position the login button absolutely */
+        top: 45px; /* Align the login button to the top of the navbar */
+        right: 15px; /* Align the login button to the right */
+        margin-top: 8px; /* Add margin to the top of the login button */
+        margin-right: 15px; /* Add margin to the right of the login button */
+    }
+    
+    .navbar-collapse {
+        background-color: black; /* Background color of the toggler menu */
+        margin-top: 30px; /* Increase the margin from the top to create space */
+        max-height: 350px; /* Adjust the maximum height of the menu */
+        font-size: medium;
+    }
+    
+    .navbar-nav .nav-link {
+        color: white; /* Text color of the list items */
+        padding: 5px 15px; /* Decrease padding for the menu items */
+        font-size: medium; /* Decrease font size for the menu items */
+        font-weight: bold; 
+    }
+    
+    .carousel-caption.text-section {
+        position: absolute;
+        bottom: 100%;
+        left: 3%;
+        transform: translateY(-50%);
+        background: transparent; /* Semi-transparent black background */
+        padding: 20px;
+        color: #fff; /* Text color */
+        width: 100%; /* Adjusted width to cover the entire carousel */
+        text-align: left; /* Align text to the left */
+        font-size: medium;
+    }   
+    
+    .carousel-item img {
+        height: auto;
+        max-width: 100%;
+      }
+   
+    
+}
+
+.insta-btn a,
+.ytb-btn a {
+    color: #000; /* Adjust text color to be darker */
+}
+
+.login-btn {
+    background-color: black;
+    color: white; /* Adjust text color to be darker */
+    border: 1px solid #000; /* Adjust border color to be darker */
+    padding: 15px 30px;
+    border-radius: 30px;
+}
+
+.login-btn:hover,
+.login-btn:focus {
+    background-color: #000; /* Adjust background color on hover/focus */
+    color: #fff; /* Adjust text color on hover/focus */
+}
+
+.upper-carousel .carousel-item img {
+    height: 110vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+.upper-carousel .carousel-inner {
+    height: 100vh;
+}
+
+  
+/* Custom CSS for text */
+.upper-carousel .carousel-caption.text-section {
+    position: absolute;
+    top: 50%;
+    left: 3%;
+    transform: translateY(-50%);
+    background: transparent; /* Semi-transparent black background */
+    padding: 20px;
+    color: #fff; /* Text color */
+    width: 100%; /* Adjusted width to cover the entire carousel */
+    text-align: left; /* Align text to the left */
+}
+
+.upper-carousel .carousel-caption.text-section h1 {
+    font-size: 40px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    color: #fff; /* Text color */
+}
+
+.upper-carousel .carousel-caption.text-section h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #fff; /* Text color */
+}
+
+.upper-carousel .carousel-caption.text-section p {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #fff; /* Text color */
+}
+
+.upper-carousel .dare-btn {
+    background-color: black;
+    color: white; /* Adjust text color to be darker */
+    border: 1px solid #000; /* Adjust border color to be darker */
+    padding: 20px 40px;
+    font-size: larger;
+    border-radius: 30px;
+}
+
+.upper-carousel .dare-btn:hover,.dare-btn:focus{
+    background-color: #000; /* Adjust background color on hover/focus */
+    color: #fff; /* Adjust text color on hover/focus */
+}
+
+/* Trending Treks Section */
+@media (max-width: 991px) {
+    .carousel-item .card-img-top {
+        height: 100%;
+        width: 100%;
+        object-fit: contain; /* Adjust to 'contain' to fit the entire image within the card */
+    }
+}
+
+/* #TOUR SEARCH */
+/*-----------------------------------*/
+.choose-place {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: grey;
+    margin-bottom: 0;
+    margin-top: 50px;
+}
+
+.formfill {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 30px;
+}
+.tour-search {
+    background:  #3b82f6; /* Adjust color as needed */
+    padding: 60px 15px; /* Adjust padding as needed */
+    text-align: center;
+    margin-top: 10px;
+
+  }
+  
+  .tour-search-form {
+    max-width: 600px; /* Adjust max-width as needed */
+    margin: 0 auto; /* Center the form horizontally */
+    display: flex;
+    justify-content: space-between; /* Distribute space between elements */
+    align-items: center; /* Align items vertically */
+    flex-wrap: wrap; /* Allow elements to wrap to the next line */
+  }
+  
+  .input-wrapper {
+    flex: 0 0 calc(50% - 10px); /* Adjust width of input wrappers */
+    margin-bottom: 20px; /* Adjust spacing between input wrappers */
+  }
+  
+  .input-label {
+    display: block;
+    color: #333; /* Adjust color as needed */
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 25px; /* Adjust border-radius as needed */
+    border: 1px solid #ccc; /* Adjust color as needed */
+    background-color: #fff; /* Adjust color as needed */
+  }
+  
+  .input-field::placeholder {
+    color: #8d99ae; /* Adjust color as needed */
+  }
+  
+  .tour-search .btn {
+    flex: 0 0 100%; /* Make button full width */
+    max-width: 200px; /* Adjust max-width as needed */
+    padding: 12px 20px;
+    border-radius: 25px; /* Adjust border-radius as needed */
+    border: 1px solid #3b82f6; /* Adjust color as needed */
+    background-color: black; /* Adjust color as needed */
+    color: #fff; /* Adjust color as needed */
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .tour-search .btn:hover {
+    background-color: orange; /* Adjust color as needed */
+  }
+.choose {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: grey;
+    padding-top: 70px;
+    margin-bottom: 0;
+}
+
+.trending-treks {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 30px;
+}
+/* Card Styles */
+.card {
+    margin-left: 10px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    width: calc(100% - 20px); /* Adjusted width to occupy full width with reduced margins */
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-link {
+    text-decoration: none;
+    margin-bottom: 50px;
+}
+
+.card-title:hover {
+    color: darkorange;
+}
+
+.card-title {
+    color: #333;
+    font-size: 22px;
+}
+
+.card-text.price {
+    font-weight: bold;
+    font-size: large;
+}
+
+.card-text {
+    font-size: 16px;
+    color: #666;
+}
+
+.fa-heart {
+    color: red;
+    margin-bottom: 20px;
+}
+
+/* Trending Tours Section */
+.dare-section,
+.tour-section {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.tour-section {
+    margin-top: 50px;
+}
+
+.choose-tours {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: grey;
+    margin-bottom: 0;
+}
+
+.trending-tours {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 30px;
+}
+
+/* Tour Card */
+.tour-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.tour-card:hover {
+    transform: translateY(-5px);
+}
+
+.tour-card .card-img-top {
+    border-bottom: 1px solid #ddd;
+}
+
+.tour-card .card-details {
+    padding: 20px;
+}
+
+.tour-card .card-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.tour-card .card-subtitle {
+    color: #777;
+    font-size: 16px;
+}
+
+.tour-card .card-price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+}
+
+.tour-card .book-now-btn {
+    background-color: orange;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    cursor: pointer;
+    margin-left: 35px;
+}
+
+.tour-card .book-now-btn:hover {
+    background-color: #ff6600;
+    padding-left: 10px;
+}
+
+ /* Popular Destinations Section */
+.popular-destinations-section {
+    padding: 50px 0;
+}
+
+.choose-destination {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: grey;
+    margin-bottom: 0;
+}
+
+.section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 30px;
+}
+
+/* Destination Card */
+.destination-card {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    border: none; /* Remove border */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin-bottom: 30px;
+    width: auto; /* Set fixed width */
+    height: auto;/* Set fixed height */
+}
+
+.destination-card:hover {
+    transform: translateY(-5px);
+}
+
+.destination-card img {
+    display: block; /* Ensure the image fills the entire width of the card */
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    object-fit: contain;
+}
+
+.destination-details {
+    padding: 20px;
+}
+
+.destination-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.destination-description {
+    font-size: 16px;
+}
+/* Previous and Next buttons */
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: rgb(0, 0, 0); /* Semi-transparent black background */
+    color: white; /* White text */
+    width: 50px; /* Adjust button width */
+    height: 50px; /* Adjust button height */
+    border-radius: 50%; /* Make button circular */
+    font-size: 24px; /* Adjust font size */
+    line-height: 50px; /* Center align text vertically */
+}
+.carousel-control-prev {
+    margin-left: -60px;
+    margin-top: 250px;
+}
+.carousel-control-next {
+    margin-right: -60px;
+    margin-top: 250px;
+}
+
+/* Section Gallary Start */
+.gallary-title{
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.gallary{
+    margin-top: 50px;
+}
+.gallary .card{
+    border-radius: 10px;
+    box-shadow: rgba(0,0,0,0.1) 0px 4px 12px;
+    cursor: pointer;
+}
+.gallary .card img{
+    border-radius: 10px;
+    transition: 0.5s;
+   
+}
+.gallary .card img:hover{
+    transform: scale(1.1);
+}
+/* Section Gallary End */
+
+  
+/*Why choose us section*/
+.why-choose-us-section {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+.services{
+    background: #f9f9f9;
+    margin-top: 50px;
+}
+.services .card{
+    box-shadow: rgba(0,0,0,0.1) 0px 4px 12px;
+    border: none;
+    cursor: pointer;
+}
+.why-choose-us-section .card i {
+    font-size: 80px;
+    text-align: center;
+    color: #ffa500;
+    margin-top: 20px;
+}
+
+.services .card .card-body h3{
+    font-weight: 600;
+}
+
+
+/* Connect With Us Section */
+.connect-with-us-section {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+
+.section-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.connect-with-us-section p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.btn-primary {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+    margin-left: 20px;
+}
+
+.btn-primary:hover {
+    background-color: #e65c00;
+}
+
+/* Footer Section */
+.footer-section {
+    background-color: black;
+    color: white;
+    padding: 50px 0;
+}
+
+.footer-section img {
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+}
+
+.social-links {
+    margin-bottom: 20px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin-right: 10px;
+    color: white;
+    font-size: 24px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: black;
+    border: 2px solid black;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+    text-decoration: none; /* Remove underline */
+}
+.social-links a:hover {
+    background-color: #ff6600;
+    border-color: #ff6600;
+    color: black;
+}
+.useful-links a {
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s ease;
+}
+
+.useful-links a:hover {
+    font-weight: bold;
+}
+
+.footer-section h5 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.footer-section p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Bottom Footer */
+.footer-section .row:last-child {
+    margin-top: 30px;
+}
+
+
+.package {
+    padding: 60px 0;
+}
+
+.section-subtitle {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-size: 36px;
+    color: #000;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.section-text {
+    font-size: 18px;
+    color: #666;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.package  .package-list {
+    margin-top: 30px;
+}
+
+.package  .package-card {
+    background: #f5f5f5;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+.package  .card-banner img {
+    width: 100%;
+    height: fit-content;
+    object-fit: contain;
+}
+
+.package  .card-content {
+    padding: 30px;
+}
+
+.package  .card-title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.package  .card-text {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.package .card-meta-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.package  .card-meta-item {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.package .card-meta-item:last-child {
+    margin-right: 0;
+}
+
+.package .meta-box {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #555;
+    font-size: 14px;
+}
+
+.package .meta-box ion-icon {
+    color: #3b82f6;
+    font-size: 16px;
+}
+
+.package .card-price {
+    background: #3b82f6;
+    color: #fff;
+    padding: 25px;
+    text-align: center;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.package .price {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.package .price span {
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.package .reviews {
+    font-size: 20px;
+}
+
+.package .card-rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-size: 16px;
+}
+
+.package .card-rating ion-icon:last-child {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.package .btn {
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+
+.package .btn-secondary {
+    background-color: #fff;
+    color: #3b82f6;
+    padding: 12px 20px;
+    border: 1px solid #3b82f6;
+}
+
+.package .btn-secondary:hover {
+    background-color: orange;
+    color: #fff;
+}
+

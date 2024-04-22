@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Kashmir-Trek</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Font Awesome CDN link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="shortcut icon" href="/images/Blue_Minimalist_Traveling_Logo_-removebg-preview.png" type="image/x-icon">
+  <style>
+    /* Global styles */
+    body {
+      background-color: #f9f9f9;
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Navbar styles */
+    .navbar {
+      background-image: url('/images/beachsubpage.jpg');
+      background-size: cover;
+      background-position: center;
+      font-family: "Poppins", sans-serif;
+      position: relative;
+      width: 100%;
+      height: 280px;
+    }
+
+    /* Navbar brand image */
+    .navbar-brand img {
+      margin-left: 50px;
+    }
+
+    /* Navbar links */
+    .navbar-nav {
+      margin: 0 auto;
+    }
+
+    .navbar-toggler {
+      border: none;
+    }
+
+    .navbar-nav .nav-link {
+      padding: 8px 16px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      transition: background-color 0.3s ease;
+      background-color: black;
+    }
+
+    .nav-link:hover {
+      color: orange;
+    }
+
+    .navbar-toggler-icon {
+      background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="black" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
+      width: 30px;
+      height: 30px;
+    }
+
+    .login-btn {
+      background-color: black;
+      color: white; /* Adjust text color to be darker */
+      border: 1px solid #000; /* Adjust border color to be darker */
+      padding: 15px 30px;
+      border-radius: 30px;
+    }
+
+    .login-btn:active,
+    .login-btn:focus {
+      background-color: black;
+      color: white; /* Adjust text color to be darker */
+      border: 1px solid #000; /* Adjust border color to be darker */
+    }
+
+    /* Page content */
+    .container-fluid {
+      padding: 20px;
+    }
+
+    .page-title {
+      text-align: center;
+      font-size: 32px;
+      font-weight: bold;
+      color: black;
+      margin-top: 30px;
+    }
+
+    .overview-text {
+      font-size: 18px;
+      line-height: 1.6;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
+    }
+
+    .card {
+      margin-top: 20px;
+      background-color: whitesmoke;
+      color: black;
+      font-weight: bold;
+      border: 2px solid black;
+      border-radius: 15px;
+    }
+
+    .book-now {
+      background-color: orange;
+      color: white;
+      border: none;
+      padding: 10px 30px;
+      font-size: 18px;
+    }
+    /*Itinerary*/
+    .enquire{
+      margin-left: 650px;
+    }
+    .Itinerary-title{
+      font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 30px;
+    }
+    .Itinerary-description{
+      font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: grey;
+    padding-top: 10px;
+    margin-bottom: 0;
+    }
+    .secondImg {
+      width: 100%;
+      height: auto;
+      border-radius: 20px;
+      margin-top: 20px;
+    }
+    /* Highlights card */
+    .highlights-card {
+      margin-top: 20px;
+      background-color: #ffffff;
+      color: black;
+      font-weight: bold;
+      border: 2px solid black;
+      border-radius: 15px;
+    }
+
+    .highlights-card .card-title {
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .highlights-card .card-text {
+      font-size: 16px;
+      line-height: 1.6;
+      text-align: left;
+      max-width: 80%;
+      margin: 0 auto;
+    }
+    /* Footer Section */
+.footer-section {
+    background-color: black;
+    color: white;
+    padding: 50px 0;
+}
+
+.footer-section img {
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+}
+
+.social-links {
+    margin-bottom: 20px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin-right: 10px;
+    color: white;
+    font-size: 24px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: black;
+    border: 2px solid black;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+    text-decoration: none; /* Remove underline */
+}
+.social-links a:hover {
+    background-color: #ff6600;
+    border-color: #ff6600;
+    color: black;
+}
+.useful-links a {
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s ease;
+}
+
+.useful-links a:hover {
+    font-weight: bold;
+}
+
+.footer-section h5 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.footer-section p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Bottom Footer */
+.footer-section .row:last-child {
+    margin-top: 30px;
+}
+    /* Responsive styles */
+    @media (max-width: 991px) {
+      /* Navbar styles for smaller screens */
+      .navbar {
+        height: auto;
+      }
+
+      .navbar-toggler {
+        background-color: white;
+        position: absolute;
+        top: 50px;
+        right: 10px;
+        z-index: 1002;
+      }
+
+      .login-btn {
+        background-color: black;
+        position: absolute;
+        top: 50px;
+        right: 40%;
+        transform: translateX(50%);
+        z-index: 1001;
+      }
+
+      .navbar-collapse {
+        background-color: rgba(0, 0, 0, 0.5);
+        margin-top: 60px;
+      }
+
+      .navbar-nav .nav-link {
+        color: white;
+        padding: 10px 15px;
+        font-size: 16px;
+      }
+
+      .nav-link:hover {
+        color: orange;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .secondImg {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .overview-text {
+        padding: 10px;
+      }
+
+      .highlights-card .card-title {
+        font-size: 20px;
+      }
+
+      .highlights-card .card-text {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-transparent nav-md" id="kasol">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#"><img src="/images/logo.png" alt="" style="margin-left: 50px;"></a>
+      <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Tours</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Treks</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Reviews</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About Us</a>
+          </li>
+          <!-- Instagram Icon -->
+          <li class="nav-item insta-btn">
+            <a href="#" class="nav-link">
+              <i class="fab fa-instagram fa-lg"></i>
+            </a>
+          </li>
+          <!-- YouTube Icon -->
+          <li class="nav-item ytb-btn">
+            <a href="#" class="nav-link">
+              <i class="fab fa-youtube fa-lg"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- Login Button -->
+      <a href="/login.html" class="nav-link btn login-btn">Login</a>
+    </div>
+  </nav>
+  <!-- for kedarnath page -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-8">
+        <h1 class="page-title">Kashmir-Trek</h1>
+        <div class="container">
+          <i class="fa-solid fa-location-dot" style="font-size: large;"> Manali</i>
+        </div>
+        <img class="secondImg" src="/images/kashmircover.webp" alt="">
+        <hr>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3">
+              <img src="/Subpage-images/duration.svg" alt="Duration Icon" class="image">
+              <h2>Duration</h2>
+              <p>09 days</p>
+            </div>
+            <div class="col-lg-3">
+              <img src="/Subpage-images/tour-type.svg" alt="Tour-type Icon" class="image">
+              <h2>Tour-type</h2>
+              <p>Trekking</p>
+            </div>
+            <div class="col-lg-3">
+              <img src="/Subpage-images/batch-size.svg" alt="Batch-size Icon" class="image">
+              <h2>Batch-size</h2>
+              <p>25</p>
+            </div>
+            <div class="col-lg-3">
+              <img src="/Subpage-images/age-group.svg" alt="Age Group Icon" class="image">
+              <h2>Age Group</h2>
+              <p>18yrs-35yrs</p>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <h1 class="page-title">Overview</h1>
+        <div class="container">
+          <div class="overview-text">
+            <p>
+              Welcome to the breathtaking world of Kashmir Trek, where nature's splendor meets the adventurous spirit. Nestled in the heart of the Himalayas, the Kashmir region offers some of the most awe-inspiring landscapes and thrilling trekking opportunities in the world. Whether you're a seasoned trekker or an adventurous soul seeking a new challenge, the Kashmir Trek promises an unforgettable expedition filled with mesmerizing vistas, cultural encounters, and unforgettable experiences. <br><br>
+              The Kashmir Trek is a remarkable journey that takes you through the pristine beauty of the Kashmir Valley, offering a unique blend of natural wonders and cultural immersion. With its snow-capped peaks, lush meadows, dense forests, and sparkling rivers, this region is a paradise for outdoor enthusiasts and nature lovers alike. <br><br>
+              Embark on the adventure of a lifetime with the Kashmir Trek and discover the unparalleled beauty and charm of this enchanting region. Whether you're seeking a thrilling outdoor escapade or a soulful journey amidst nature's wonders, the Kashmir Trek promises an experience that will stay with you long after the journey ends. Join us as we explore the hidden gems and timeless landscapes of Kashmir,make memories that will last a lifetime.
+            </p>
+          </div>
+        </div>
+        <hr>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              <h1 style="text-align: left;font-weight: bolder;">Itinerary <a href="/login.html" class="btn btn-warning enquire">Enquire Now</a>
+              </h1>
+            </div>
+           
+            <div class="col-md-12">
+              <div class="row">
+                <div class="col-md-6">
+                  <br>
+                  <h2 class="Itinerary-title">DAY 1 : ARRIVAL AT SRINAGAR AND DRIVE TO SONMARG</h2>
+                  <img class="secondImg" src="/Subpage-images/kashmir-trek/day-1.jpg" alt="">
+                  <ul>
+                    <li><p class="Itinerary-description">
+                      90 Km drive. Explore Srinagar at your own and aftrnoon we will take you from Srinagar to Sonamarg, where the basecamp for the trek is situated</p></li>
+                    <li><p class="Itinerary-description">Meals: Breakfast, Lunch & Dinner </p></li>
+
+                  </ul>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <br>
+                  <h2 class="Itinerary-title">Day 2: Start From Sonmarg To Nichnai Via Shekdur</h2>
+                  <img class="secondImg" src="/Subpage-images/kashmir-trek/day-2.jpg" alt="">
+                  
+                          <ul>
+                            <li><p class="Itinerary-description">Sonmarg (7,800 ft) to Nichnai (11,500 ft) via Shekdur Trekking distance of 11Km Trekking time around 8 hours
+                             </p></li>
+                            <li><p class="Itinerary-description"> You will be starting your trek on Day 2 with a steep ascent towards the meadow of Shekdur, where the team will have a break before heading towards Nichnai.</p></li>
+                            <li><p class="Itinerary-description">The last stretch of today’s trek is a riverside trail through a valley with snow-clad peaks on both sides. The river valley marks the beginning of Nichnai and further downstream, there will be plenty of flat green meadows to put up our tents for the night.</p></li>
+                            <li><p class="Itinerary-description">Meals: Lunch &Dinner</p></li>
+                          </ul>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <br>
+                  <h2 class="Itinerary-title">Trek Nichnai to Vishnusar Lake via Nichnai Pass</h2>
+                  <img class="secondImg" src="/Subpage-images/kashmir-trek/day-3.jpg" alt="">
+                  
+                          <ul>
+                            <li><p class="Itinerary-description">Trek distance: 13.5  km | Trek Duration: 7 hours | Altitude gain: 11,607 ft to 12,011 ft via 13,229 ft</p></li>
+                            <li><p class="Itinerary-description">Trek type: Moderate. 1.5 hours of gradual ascent followed by an hour-long climb to the pass. A steep descent from the pass for about an hour easing off into a flat walk. 
+                            </p></li>
+                            <li><p class="Itinerary-description">Meals: Breakfast, Lunch & Dinner </p></li>
+
+                          </ul> 
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <br>
+                  <h2 class="Itinerary-title">Day 4 :- Rest day </h2>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <br>
+                  <h2 class="Itinerary-title">DAY 5 :- Trek from Vishnusar to Gadsar via Gadsar Pass</h2>
+                  <img class="secondImg" src="/Subpage-images/kashmir-trek/day-5.jpg" alt="">
+                  
+                          <ul>
+                            <li><p class="Itinerary-description">Trek distance: 16 km | Trek Duration: 7.5 hours | Altitude gain and loss: 12,011 ft to 10,706 ft via 13,715 ft</p></li>
+                           <li><p class="Itinerary-description">Trek type: Moderate difficult. 1.5-2 hours of steep ascent followed by 1 hour of steep descent, easing off into level walk. </p></li>
+                            <li><p class="Itinerary-description">Meals: Breakfast, Lunch & Dinner </p></li>
+
+                          </ul> 
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <br>
+                  <h2 class="Itinerary-title">DAY 6 :- Trek from Gadsar to Satsar                  </h2>
+                  <img class="secondImg" src="/Subpage-images/kashmir-trek/day-6.jpg" alt="">
+                  
+                          <ul>
+                            <li><p class="Itinerary-description">Trek distance: 11.5 km | Trek Duration: 4.5 hours | Altitude gain: 10,706 ft to 11,985 ft</p></li>
+                            <li><p class="Itinerary-description">Trek type: Moderate. 1.5 hours of steep ascent followed by a level walk. </p></li>
+                            <li><p class="Itinerary-description">Meals: Breakfast, Lunch & Dinner </p></li>
+
+                          </ul> 
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <br>
+                  <h2 class="Itinerary-title">DAY 7 :- Trek from Satsar to Gangabal via Zaj Pass                  </h2>
+                  <img class="secondImg" src="/Subpage-images/kashmir-trek/day-7.jpeg" alt="">
+                  
+                          <ul>
+                            <li><p class="Itinerary-description">Trek distance: 9 km | Trek Duration: 6 hours | Altitude loss: 11,985 ft to 11,486 ft via 13,276 ft </p></li>
+                            <li><p class="Itinerary-description">Trek type: Difficult. 30 minutes each of gradual ascent followed by steep ascent for about 45 minutes and then a steep descent. Similarly ascending and descending trail all through. </p></li>
+                            <li><p class="Itinerary-description">Meals: Breakfast, Lunch & Dinner </p></li>
+
+                          </ul> 
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <br>
+                  <h2 class="Itinerary-title">DAY 8 :- Trek from Gangabal to Naranag. Drive to Srinagar</h2>
+                  <img class="secondImg" src="/Subpage-images/kashmir-trek/day-8.jpg" alt="">
+                  
+                          <ul>
+                            <li><p class="Itinerary-description">Trek distance: 13 km | Trek Duration: 6 hours | Altitude loss: 11,486 ft to 7,800 ft
+                              Drive Distance: 2 hours | Drive Duration: 50 km</p></li>
+                            <li><p class="Itinerary-description">  Trek type: Moderate. A mix of ascents and descents for 6 km followed by a very steep descent all the way down. You should reach Srinagar by 6 pm.</p></li>
+                            <li><p class="Itinerary-description">Please note: The distance between campsites may vary by 100 meters depending the weather conditions and the route you take. The altitude may also vary by 100 feet for similar reasons.</p></li>
+                            <li><p class="Itinerary-description">Meals: Breakfast, Lunch & Dinner </p></li>
+
+                          </ul> 
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <br>
+                  <h2 class="Itinerary-title">Day 9 :- Explore Dal lake and Leave for Hometown With Beautiful memories</h2> 
+                  <img class="secondImg" src="/Subpage-images/kashmir-trek/day-9.jpeg" alt="">
+                 
+                          <ul>
+                            <li><p class="Itinerary-description">After breakfast we are enjoying Sikara ride and Explore Dal lake.
+                              and after that departure for Hometown With beautiful Memories.</p></li>
+                          </ul> 
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      <div class="col-lg-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title text-center" style="color: black; font-size: x-large;">Starting from <b>₹15,999.00</b></h5><br>
+            <div class="card-text">
+              <div class="row">
+                <div class="col-lg-6">
+                  <p class="text-center">Meals Included:</p>
+                  <ul class="list-unstyled" style="text-align: center;">
+                    <li>Breakfast</li>
+                    <li>Lunch</li>
+                    <li>Dinner</li>
+                  </ul>
+                </div>
+                <div class="col-lg-6">
+                  <p class="text-center">Activities:</p>
+                  <ul class="list-unstyled"  style="text-align: center;">
+                    <li>Campfire</li>
+                    <li>Trekking</li>
+                    <li>Adventure Sports</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="text-center">
+              <a href="#" class="btn btn-primary book-now">Book Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="card highlights-card">
+          <div class="card-body">
+            <h5 class="card-title text-center" style="color: black; font-size: x-large;">Highlights</h5>
+            <div class="card-text" style="white-space: pre-line;">
+              <!-- Add your highlights content here -->
+              <p>
+                DAY 1 : ARRIVAL AT SRINAGAR AND' DRIVE TO SONMARG <br>
+
+                DAY 2 : SONMARG TO NINCHAI <br>
+
+                DAY 3 : NICHNAI TO VISHNUSAR LAKE <br> 
+
+                DAY 4 : REST DAY <br>
+
+                DAY 5 : VISHNUSAR LAKE TO GADSAR VIA GADSAR PASS <br>
+
+                DAY 6 : GADSAR TO SATSAR <br>
+
+                DAY 7 : SATSAR TO GANGABAL TWIN LAKE VIA ZAJ PASS <br>
+
+                DAY 8 : GANGABAL TO NARANG DRIVE TO SRINAGAR <br>
+
+                DAY 9: EXPLORE DAL LAKE AND DEPART WITH BEAUTIFUL MEMORIES. <br>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  
+  <!--Footer-->
+  <!-- Footer -->
+<footer class="footer-section">
+  <div class="container">
+      <!-- Social Media Links -->
+      <div class="row justify-content-center mb-4">
+          <div class="col-md-4 text-center">
+              <img src="/images/logo-removebg-preview.png" alt=""><br>
+              <p>We believe in building a strong relationship with our clients by maintaining transparency with respect to quality service as well as safety.</p>
+              <br>
+              <h5>Connect with us</h5>
+              <div class="social-links">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-linkedin"></i></a>
+              </div>
+          </div>
+      </div>
+      <!-- Company Information, Useful Links, and Contact -->
+      <div class="row text-center">
+          <!-- Company Information -->
+          <div class="col-md-4 mb-4">
+              <h5>About Us</h5>
+              <p>Our Travel Agency is dedicated to providing unforgettable travel experiences that immerse our clients in the beauty of the natural world. Explore the world with confidence and let us be your guide to unforgettable adventures.</p>
+          </div>
+          <!-- Useful Links -->
+          <div class="col-md-4 mb-4 useful-links">
+              <h5>Useful Links</h5>
+              <p><a href="/index.html" class="text-reset">Home</a></p>
+              <p><a href="#" class="text-reset">Destinations</a></p>
+              <p><a href="#" class="text-reset">Treks</a></p>
+              <p><a href="#" class="text-reset">Help</a></p>
+          </div>
+          <!-- Contact Information -->
+          <div class="col-md-4 mb-4">
+              <h5>Contact</h5>
+              <p><i class="fas fa-map-marker-alt"></i> 426 Vrindavan Complex, Vasna Rd,Ahmedabad,380008</p>
+              <p><i class="fas fa-envelope"></i> help@bharattravel.com</p>
+              <p><i class="fas fa-phone"></i> +91 6355664142</p>
+          </div>
+      </div>
+      <!-- Bottom Footer -->
+      <div class="row">
+          <div class="col-md-12 text-center">
+              <p>&copy; 2024 Bharat Travel Agency. All rights reserved.</p>
+          </div>
+      </div>
+  </div>
+</footer>
+<script src="travel.js"></script>
+</body>
+</html>

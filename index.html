@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Travel Agency</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Font Awesome CDN link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/style.css">
+  <link rel="shortcut icon" href="/images/Blue_Minimalist_Traveling_Logo_-removebg-preview.png" type="image/x-icon">
+</head>
+<body>
+    <!--NAVBAR STYLING-->
+  <nav class="navbar navbar-expand-lg  bg-transparent ">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="/images/logo.png" alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class=" navbar-collapse justify-content-end" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Tours">Tours</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#Treks" class="nav-link">Treks</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#gallary" class="nav-link">Gallary</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About Us</a>
+                </li>
+                <!-- Instagram Icon -->
+                <li class="nav-item insta-btn">
+                    <a href="#" class="nav-link">
+                        <i class="fab fa-instagram fa-lg"></i>
+                    </a>
+                </li>
+                <!-- YouTube Icon -->
+                <li class="nav-item ytb-btn">
+                    <a href="#" class="nav-link">
+                        <i class="fab fa-youtube fa-lg"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- Login Button -->
+        <a href="/login.html" class="nav-link btn login-btn">Login</a>
+    </div>
+</nav>
+
+      
+      <!-- Carousel IN NAVBAR-->
+      <div id="carouselExampleSlidesOnly" class="carousel slide upper-carousel" data-bs-ride="carousel" data-bs-interval="2000">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="/images/hillpic.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption text-start text-section">
+              <h3>We Dare You!</h3>
+              <h1>To Explore The Unknown!</h1>
+              <p>Discover your next great adventure,<br>become an explorer to get started!</p>
+              <a href="/login.html" class="btn dare-btn">Explore Now</a>
+          </div>
+          </div>
+          <div class="carousel-item">
+            <img src="/images/tajmahal.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption text-start text-section">
+              <h3>We Dare You!</h3>
+              <h1>To Explore The Unknown!</h1>
+              <p>Discover your next great adventure,<br>become an explorer to get started!</p>
+              <a href="/login.html" class="btn dare-btn">Explore Now</a>
+          </div>
+          </div>
+          <div class="carousel-item">
+            <img src="/images/beach.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption text-start text-section">
+              <h3>We Dare You!</h3>
+              <h1>To Explore The Unknown!</h1>
+              <p>Discover your next great adventure,<br>become an explorer to get started!</p>
+              <a href="/login.html" class="btn dare-btn">Explore Now</a>
+          </div>
+          </div>
+          <div class="carousel-item">
+            <img src="/images/rajasthancover.webp" class="d-block w-100" alt="...">
+            <div class="carousel-caption text-start text-section">
+              <h3>We Dare You!</h3>
+              <h1>To Explore The Unknown!</h1>
+              <p>Discover your next great adventure,<br>become an explorer to get started!</p>
+              <a href="/login.html" class="btn dare-btn">Explore Now</a>
+          </div>
+          </div>
+          <div class="carousel-item">
+            <img src="/images/leh-2.jpg" class="d-block w-100" alt="...">  
+            <div class="carousel-caption text-start text-section" id="upper-carousel">
+              <h3>We Dare You!</h3>
+              <h1>To Explore The Unknown!</h1>
+              <p>Discover your next great adventure,<br>become an explorer to get started!</p>
+              <a href="/login.html" class="btn dare-btn">Explore Now</a>
+          </div>       
+          </div>
+        </div>
+      </div>
+
+    <!-- - #TOUR SEARCH FORM-->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <p class="choose-place">FIND YOUR TOUR</p>
+                <h2 class="formfill">Search Tours</h2>
+            </div>
+        </div>
+    </div>
+    <section class="tour-search">
+        <div class="container">
+
+          <form action="" class="tour-search-form">
+
+            <div class="input-wrapper">
+              <label for="destination" class="input-label">Search Destination</label>
+
+              <input type="text" name="destination" id="destination" required placeholder="Enter Destination"
+                class="input-field">
+            </div>
+
+            <div class="input-wrapper">
+              <label for="people" class="input-label">Max Number*</label>
+
+              <input type="number" name="people" id="people" required placeholder="No.of People" class="input-field">
+            </div>
+
+            <div class="input-wrapper">
+              <label for="checkin" class="input-label">FROM</label>
+
+              <input type="date" name="checkin" id="checkin" required class="input-field">
+            </div>
+
+            <div class="input-wrapper">
+              <label for="checkout" class="input-label">TO</label>
+
+              <input type="date" name="checkout" id="checkout" required class="input-field">
+            </div>
+
+            <button type="submit" class="btn btn-secondary">Inquire now</button>
+
+          </form>
+
+        </div>
+      </section>
+
+      <!--TRENDING TREKS CARD-->
+      <section class="dare-section" id="Treks">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p class="choose">CHOOSE YOUR PLACE</p>
+                    <h2 class="trending-treks">Trending Treks</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="container">
+                    <div class="row row-cols-1 row-cols-md-3 g-4">
+                     <!-- First Card -->
+                        <div class="col">
+                            <a href="/Manali-Kasol.html" class="card-link">
+                                <div class="card">
+                                    <img src="/images/manali-kasol.jpg" class="card-img-top" alt="Manali-Kasol Image">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Kasol Trek</h5>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <p class="card-text"><i class="fas fa-clock"></i> 10 Days</p>
+                                            <div>
+                                                <i class="fa-regular fa-heart"></i>
+                                            </div>
+                                        </div>
+                                        <p class="card-text price">₹13,990.00/-</p>
+                                        <p class="card-text"><i class="fa-solid fa-location-dot"></i> Manali, India</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- Second Card -->
+                        <div class="col">
+                            <a href="/kedarnath.html" class="card-link">
+                                <div class="card">
+                                    <img src="/images/kedarnath.jpg" class="card-img-top" alt="Kedarnath Image">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Kedarnath-Trek</h5>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <p class="card-text"><i class="fas fa-clock"></i> 7 Days</p>
+                                            <div>
+                                                <i class="fa-regular fa-heart"></i>
+                                            </div>
+                                        </div>
+                                        <p class="card-text price">15,699.00/-</p>
+                                        <p class="card-text"><i class="fa-solid fa-location-dot"></i> Kedarnath, India</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- Third Card -->
+                        <div class="col">
+                            <a href="/kashmir-trek.html" class="card-link">
+                                <div class="card">
+                                    <img src="/images/kashmir-trek.png" class="card-img-top" alt="Kashmir Image">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Kashmir-Trek</h5>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <p class="card-text"><i class="fas fa-clock"></i> 09 Days</p>
+                                            <div>
+                                                <i class="fa-regular fa-heart"></i>
+                                            </div>
+                                        </div>
+                                        <p class="card-text price">15,999.00/-</p>
+                                        <p class="card-text"><i class="fa-solid fa-location-dot"></i> Kashmir, India</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Fourth Slide -->
+            <div class="carousel-item">
+                <div class="container">
+                    <div class="row row-cols-1 row-cols-md-3 g-4">
+                        <!-- Fourth Card -->
+                        <div class="col">
+                            <a href="/leh-biking.html" class="card-link">
+                                <div class="card">
+                                    <img src="/images/leh-biking.jpg" class="card-img-top" alt="Kashmir Image">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Leh-Biking</h5>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <p class="card-text"><i class="fas fa-clock"></i> 09 Days</p>
+                                            <div>
+                                                <i class="fa-regular fa-heart"></i>
+                                            </div>
+                                        </div>
+                                        <p class="card-text price">24,500.00/-</p>
+                                        <p class="card-text"><i class="fa-solid fa-location-dot"></i> Leh,India</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- Fifth Card -->
+                        <div class="col">
+                            <a href="kullu-manali.html" class="card-link">
+                                <div class="card">
+                                    <img src="/images/Manali-Shimla.jpg" class="card-img-top" alt="Kashmir Image">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Kullu-Manali</h5>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <p class="card-text"><i class="fas fa-clock"></i> 07 Days</p>
+                                            <div>
+                                                <i class="fa-regular fa-heart"></i>
+                                            </div>
+                                        </div>
+                                        <p class="card-text price">15,999.00/-</p>
+                                        <p class="card-text"><i class="fa-solid fa-location-dot"></i> Manali, India</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- Sixth Card -->
+                        <div class="col">
+                            <a href="/classic-kashmir.html" class="card-link">
+                                <div class="card">
+                                    <img src="/images/classic-kashmir.jpg" class="card-img-top" alt="Kashmir Image">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Classic-Kashmir</h5>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <p class="card-text"><i class="fas fa-clock"></i> 10 Days</p>
+                                            <div>
+                                                <i class="fa-regular fa-heart"></i>
+                                            </div>
+                                        </div>
+                                        <p class="card-text price">19,999.00/-</p>
+                                        <p class="card-text"><i class="fa-solid fa-location-dot"></i> Kashmir, India</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="container">
+                     <div class="row row-cols-1 row-cols-md-3 g-4">
+                        <!-- Fourth Card -->
+                        <div class="col">
+                            <a href="/kedarnath-Mussoorie.html" class="card-link">
+                                <div class="card">
+                                    <img src="/images/mussorie-ked.jpg" class="card-img-top" alt="Mussorie Image">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Mussorie-Rishikesh</h5>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <p class="card-text"><i class="fas fa-clock"></i> 9 Days</p>
+                                            <div>
+                                                <i class="fa-regular fa-heart"></i>
+                                            </div>
+                                        </div>
+                                        <p class="card-text price">18,500.00/-</p>
+                                        <p class="card-text"><i class="fa-solid fa-location-dot"></i> Mussorie,India</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- Fifth Card -->
+                        <div class="col">
+                            <a href="/chadar-trek.html" class="card-link">
+                                <div class="card">
+                                    <img src="/images/Chadar-trek.jpg" class="card-img-top" alt="Kashmir Image">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Chadar-Trek</h5>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <p class="card-text"><i class="fas fa-clock"></i> 08 Days</p>
+                                            <div>
+                                                <i class="fa-regular fa-heart"></i>
+                                            </div>
+                                        </div>
+                                        <p class="card-text price">17,999.00/-</p>
+                                        <p class="card-text"><i class="fa-solid fa-location-dot"></i> Leh, India</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- Sixth Card -->
+                        <div class="col">
+                            <a href="/kashmir-lakes.html" class="card-link">
+                                <div class="card">
+                                    <img src="/images/kashmir-lakes.jpg" class="card-img-top" alt="Kashmir Image">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Kashmir-Lakes</h5>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <p class="card-text"><i class="fas fa-clock"></i> 06 Days</p>
+                                            <div>
+                                                <i class="fa-regular fa-heart"></i>
+                                            </div>
+                                        </div>
+                                        <p class="card-text price">17,500.00/-</p>
+                                        <p class="card-text"><i class="fa-solid fa-location-dot"></i> Kashmir, India</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+ <!-- Trending Tours Section -->
+<section class="tour-section" id="Tours">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <p class="choose-tours">CHOOSE YOUR PLACE</p>
+                <h2 class="trending-tours">Trending Tours</h2>
+            </div>
+        </div>
+        <div id="carouselExampleControls" class="carousel slide" data-bs-interval="false">
+            <div class="carousel-inner">
+                <!-- First Slide -->
+                <div class="carousel-item active">
+                    <div class="row row-cols-1 row-cols-md-4 g-4">
+                        <!-- Tour Card 1 -->
+                        <div class="col">
+                            <a href="/jaisalmer.html" class="card-link">
+                                <div class="tour-card">
+                                    <img src="/images/Jaisalmer.jpg" class="card-img-top" alt="Tour 1">
+                                    <div class="card-details">
+                                        <h3 class="card-title">Jaisalmer</h3>
+                                        <p class="card-subtitle"><i class="fas fa-clock"></i> 05 Days</p>
+                                        <p class="card-price">₹15,000.00 <button class="book-now-btn">Book Now</button></p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- Tour Card 2 -->
+                        <div class="col">
+                            <a href="/Delhi-agra.html" class="card-link">
+                                <div class="tour-card">
+                                    <img src="/images/tajmahal-2.png" class="card-img-top" alt="Tour 2">
+                                    <div class="card-details">
+                                        <h3 class="card-title">Delhi-Agra</h3>
+                                        <p class="card-subtitle"><i class="fas fa-clock"></i> 06 Days</p>
+                                        <p class="card-price">₹25,000.00 <button class="book-now-btn">Book Now</button></p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!--Tour Card 3-->
+                        <div class="col">
+                            <a href="/Rameshwaram.html" class="card-link">
+                                <div class="tour-card">
+                                    <img src="/images/madurai.jpg" class="card-img-top" alt="Tour 3">
+                                    <div class="card-details">
+                                        <h3 class="card-title">Rameshwaram</h3>
+                                        <p class="card-subtitle"><i class="fas fa-clock"></i> 07 Days</p>
+                                        <p class="card-price">₹19,000.00 <button class="book-now-btn">Book Now</button></p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!--Tour Card 4-->
+                        <div class="col">
+                            <a href="/Port-blair.html" class="card-link">
+                                <div class="tour-card">
+                                    <img src="/images/port-blair.jpg" class="card-img-top" alt="Tour 4">
+                                    <div class="card-details">
+                                        <h3 class="card-title">Port-Blair</h3>
+                                        <p class="card-subtitle"><i class="fas fa-clock"></i> 07 Days</p>
+                                        <p class="card-price">₹20,000.00 <button class="book-now-btn">Book Now</button></p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          
+        </div>
+    </div>
+</section>
+
+
+<!-- Popular Destinations Section -->
+<section class="popular-destinations-section" id="dest">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <p class="choose-destination">CHECK YOUR DESTINATION</p>
+                <h2 class="section-title">Popular Destinations</h2>
+            </div>
+        </div>
+        <div id="demo" class="carousel slide" data-bs-interval="false"> <!-- Removed data-bs-ride attribute -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <!-- Destination Card 1 -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="destination-card">
+                                <img src="/images/udaipur-lake.jpeg" alt="Destination 1">
+                                <div class="destination-details">
+                                    <h3 class="destination-title" style="text-align: center;">UDAIPUR</h3>
+                                    <p class="destination-description">
+                                        Explore Udaipur, a gem in the heart of Rajasthan renowned for its shimmering lakes, opulent palaces, and vibrant culture. Lose yourself in the grandeur of the City Palace, stroll through the bustling markets of the old city, and cruise along the tranquil waters of Lake Pichola. With its rich history, breathtaking vistas, and warm hospitality, Udaipur promises an unforgettable journey into the royal heritage of India.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Destination Card 2 -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="destination-card">
+                                <img src="/images/delhi.jpeg" alt="Destination 2">
+                                <div class="destination-details">
+                                    <h3 class="destination-title" style="text-align: center;">DELHI</h3>
+                                    <p class="destination-description">
+                                        Explore Delhi, a vibrant metropolis blending history and modernity. Explore iconic landmarks like the Red Fort,Humayun's Tomb, India Gate, Raj Ghat, Qutub Minar and Jama Masjid, and immerse yourself in the city's diverse culture and cuisine. From bustling bazaars to serene parks, witness the hustle and bustle of Chandni Chowk and Delhi offers a captivating blend of tradition and contemporary life, making it a must-visit destination for every traveler.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Destination Card 3 -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="destination-card">
+                                <img src="/images/kolkata.jpeg" alt="Destination 3">
+                                <div class="destination-details">
+                                    <h3 class="destination-title" style="text-align: center;">KOLKATA</h3>
+                                    <p class="destination-description">
+                                        Explore Kolkata, a city brimming with history, culture, and charm. Marvel at the majestic Victoria Memorial, stroll along the iconic Howrah Bridge, and savor delectable street food delights. Delve into the city's rich literary heritage at the College Street Book Market, or unwind amidst the serene beauty of the Maidan. With its vibrant festivals and warm hospitality, Kolkata invites you to discover its unique soul at every turn.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <!-- Destination Card 4 -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="destination-card">
+                                <img src="/images/mumbai.jpeg" alt="Destination 4">
+                                <div class="destination-details">
+                                    <h3 class="destination-title" style="text-align: center;">MUMBAI</h3>
+                                    <p class="destination-description">
+                                        Explore Mumbai, the bustling metropolis that never sleeps. From the iconic Gateway of India to the vibrant markets of Colaba Causeway, experience the eclectic blend of cultures, cuisines, and lifestyles. Dive into the pulsating energy of Bollywood, stroll along the scenic Marine Drive, or indulge in a culinary adventure at the street food stalls. With its endless opportunities, Mumbai promises an unforgettable journey.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Destination Card 5 -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="destination-card">
+                                <img src="/images/goa.jpeg" alt="Destination 5">
+                                <div class="destination-details">
+                                    <h3 class="destination-title" style="text-align: center;">GOA</h3>
+                                    <p class="destination-description">
+                                        Explore Goa, India's premier beach destination renowned for its sun-kissed shores, vibrant nightlife, and Portuguese heritage. Relax on the golden sands of Anjuna Beach, party till dawn at the legendary clubs of Baga, and savor the flavors of authentic Goan cuisine. Discover ancient churches, bustling markets, and hidden coves as you immerse yourself in the laid-back charm of this coastal paradise.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Destination Card 6 -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="destination-card">
+                                <img src="/images/jaipur.jpeg" alt="Destination 6">
+                                <div class="destination-details">
+                                    <h3 class="destination-title" style="text-align: center;">Jaipur</h3>
+                                    <p class="destination-description">
+                                        Explore Jaipur, the vibrant capital of Rajasthan, where rich history and cultural heritage come alive. Marvel at the majestic Amber Fort, stroll through the bustling bazaars of the Pink City, and immerse yourself in the royal splendor of the City Palace. From admiring the intricate architecture of Hawa Mahal to experiencing traditional Rajasthani cuisine.Jaipur promises an unforgettable journey into the heart of Rajasthan's royal legacy.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Left and right controls/icons -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </div>
+</section>
+
+<!--PACKAGE SECTION-->
+<section class="package" id="package">
+    <div class="container">
+        <p class="section-subtitle">Popular Packages</p>
+        <h2 class="h2 section-title">Checkout Our Packages</h2>
+
+        <div class="row package-list">
+            <div class="col-md-12">
+                <div class="package-card">
+                    <div class="row">
+                        <div class="col-md-4 card-banner">
+                            <figure>
+                                <img src="/images/desert.jpeg" alt="Relaxing Holiday in the Mountains" loading="lazy">
+                            </figure>
+                        </div>
+                        <div class="col-md-4 card-content">
+                            <h3 class="h3 card-title">Rajasthan Mountain Retreat: Embrace the Serenity of the Aravalli Range</h3>
+                            <p class="card-text">
+                                Discover the allure of Rajasthan's mountainous landscapes with our exclusive retreat package, offering an unforgettable escape into nature's tranquility.
+                            </p>
+                            <ul class="card-meta-list">
+                                <li class="card-meta-item">
+                                    <div class="meta-box">
+                                        <ion-icon name="time"></ion-icon>
+                                        <p class="text">5D/4N</p>
+                                    </div>
+                                </li>
+                                <li class="card-meta-item">
+                                    <div class="meta-box">
+                                        <ion-icon name="people"></ion-icon>
+                                        <p class="text">Person: 8</p>
+                                    </div>
+                                </li>
+                                <li class="card-meta-item">
+                                    <div class="meta-box">
+                                        <ion-icon name="location"></ion-icon>
+                                        <p class="text">Rajasthan</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 card-price">
+                            <div class="wrapper">
+                                <p class="reviews">(15 reviews)</p>
+                                <div class="card-rating">
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star-half"></ion-icon>
+                                </div>
+                            </div>
+                            <p class="price">
+                                ₹19,999
+                                <span>/ per person</span>
+                            </p>
+                            <a class="btn btn-secondary" href="/login.html">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other Package Cards Go Here -->
+
+        </div>
+        <div class="row package-list">
+            <div class="col-md-12">
+                <div class="package-card">
+                    <div class="row">
+                        <div class="col-md-4 card-banner">
+                            <figure>
+                                <img src="/images/kullucover.jpg" alt="Relaxing Holiday in the Mountains" loading="lazy">
+                            </figure>
+                        </div>
+                        <div class="col-md-4 card-content">
+                            <h3 class="h3 card-title">Kullu-Manali Mountain Escape: Embrace the Tranquility of Himachal Pradesh</h3>
+                            <p class="card-text">
+                                Embark on an enchanting journey to the breathtaking landscapes of Kullu-Manali with our mountain escape package, designed to immerse you in the serenity of nature.
+                            </p>
+                            <ul class="card-meta-list">
+                                <li class="card-meta-item">
+                                    <div class="meta-box">
+                                        <ion-icon name="time"></ion-icon>
+                                        <p class="text">5D/4N</p>
+                                    </div>
+                                </li>
+                                <li class="card-meta-item">
+                                    <div class="meta-box">
+                                        <ion-icon name="people"></ion-icon>
+                                        <p class="text">Person:5</p>
+                                    </div>
+                                </li>
+                                <li class="card-meta-item">
+                                    <div class="meta-box">
+                                        <ion-icon name="location"></ion-icon>
+                                        <p class="text">Kashmir</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 card-price">
+                            <div class="wrapper">
+                                <p class="reviews">(35 reviews)</p>
+                                <div class="card-rating">
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star-half"></ion-icon>
+                                </div>
+                            </div>
+                            <p class="price">
+                                ₹ 22,999
+                                <span>/ per person</span>
+                            </p>
+                            <a class="btn btn-secondary" href="/login.html">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other Package Cards Go Here -->
+
+        </div>
+        <div class="row package-list">
+            <div class="col-md-12">
+                <div class="package-card">
+                    <div class="row">
+                        <div class="col-md-4 card-banner">
+                            <figure>
+                                <img src="/images/rajasthan.jpeg" alt="Relaxing Holiday in the Mountains" loading="lazy">
+                            </figure>
+                        </div>
+                        <div class="col-md-4 card-content">
+                            <h3 class="h3 card-title">Jaisalmer Desert Retreat: Experience the Tranquility of Rajasthan's Golden Sands</h3>
+                            <p class="card-text">
+                                Embark on a mesmerizing journey to the heart of the Thar Desert with our desert retreat package, designed to immerse you in the serene beauty and cultural richness of Jaisalmer.
+                            </p>
+                            <ul class="card-meta-list">
+                                <li class="card-meta-item">
+                                    <div class="meta-box">
+                                        <ion-icon name="time"></ion-icon>
+                                        <p class="text">5D/4N</p>
+                                    </div>
+                                </li>
+                                <li class="card-meta-item">
+                                    <div class="meta-box">
+                                        <ion-icon name="people"></ion-icon>
+                                        <p class="text">Person: 5</p>
+                                    </div>
+                                </li>
+                                <li class="card-meta-item">
+                                    <div class="meta-box">
+                                        <ion-icon name="location"></ion-icon>
+                                        <p class="text">Rajasthan</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 card-price">
+                            <div class="wrapper">
+                                <p class="reviews">(45 reviews)</p>
+                                <div class="card-rating">
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star-half"></ion-icon>
+                                </div>
+                            </div>
+                            <p class="price">
+                                ₹ 29,999
+                                <span>/ per person</span>
+                            </p>
+                            <a class="btn btn-secondary" href="/login.html">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other Package Cards Go Here -->
+
+        </div>
+        
+    </div>
+    <br>
+
+</section>
+
+   <!-- Section Gallary Start -->
+   <section class="gallary" id="gallary">
+    <div class="container">
+
+        <div class="col-md-12 text-center">
+            <img src="/images/logo-removebg-preview.png" alt="">
+            <h2 class="gallery-title">Gallary</h2>
+        </div>
+
+      <div class="row" style="margin-top: 30px;">
+        <div class="col-md-4 py-3 py-md-0">
+          <div class="card">
+            <img src="/images/sealink.jpeg" alt="" >
+          </div>
+        </div>
+        <div class="col-md-4 py-3 py-md-0">
+          <div class="card">
+            <img src="/images/rajasthan.jpeg" alt="">
+          </div>
+        </div>
+        <div class="col-md-4 py-3 py-md-0">
+          <div class="card">
+            <img src="/images/qutubminar.webp" alt="" >
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row" style="margin-top: 30px;">
+        <div class="col-md-4 py-3 py-md-0">
+          <div class="card">
+            <img src="/images/hillpic.jpg" alt="">
+          </div>
+        </div>
+        <div class="col-md-4 py-3 py-md-0">
+          <div class="card">
+            <img src="/images/mountains.jpeg" alt="" >
+          </div>
+        </div>
+        <div class="col-md-4 py-3 py-md-0">
+          <div class="card">
+            <img src="/images/kashmir.webp" alt="" >
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- Section Gallary End -->
+
+  <!--WHY CHOOSE US-->
+  <section class="why-choose-us-section" id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <img src="/images/logo-removebg-preview.png" alt="">
+                <h2 class="section-title">Why you should choose us</h2>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 30px;">
+            <div class="col-md-4 py-3 py-md-0">
+                <div class="card">
+                    <i class="fas fa-hotel"></i> 
+                    <div class="card-body">
+                        <h3 style="text-align: center;">Affordable Hotel</h3>
+                        <p style="text-align: center;">Discover budget-friendly accommodation options that offer comfort and convenience during your travels.</p>
+                     </div>
+                </div>
+            </div>
+            <div class="col-md-4 py-3 py-md-0">
+                <div class="card">
+                    <i class="fas fa-utensils"></i>
+                    <div class="card-body">
+                        <h3 style="text-align: center;">Food & Drinks</h3>
+                        <p style="text-align: center;">Indulge in a variety of delicious cuisines and refreshing beverages from around the world, curated to satisfy every palate.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 py-3 py-md-0">
+                <div class="card">
+                    <i class="fas fa-bullhorn"></i> 
+                    <div class="card-body">
+                        <h3 style="text-align: center;">Safety Guide</h3> 
+                        <p style="text-align: center;">Ensure your journey is secure and worry-free with expert safety tips and guidance provided by seasoned professionals.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 30px;">
+            <div class="col-md-4 py-3 py-md-0">
+                <div class="card">
+                    <i class="fas fa-globe-asia"></i>
+                    <div class="card-body">
+                        <h3 style="text-align: center;">Travel across India</h3>
+                        <p style="text-align: center;">Embark on an unforgettable journey, exploring diverse cultures, landscapes, and experiences</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 py-3 py-md-0">
+                <div class="card">
+                    <i class="fas fa-plane"></i> 
+                    <div class="card-body">
+                        <h3 style="text-align: center;">Fastest Travel</h3>
+                        <p style="text-align: center;">Experience swift and efficient travel solutions that save you time and enhance your overall journey</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 py-3 py-md-0">
+                <div class="card">
+                    <i class="fas fa-hiking"></i> 
+                    <div class="card-body">
+                        <h3 style="text-align: center;">Adventures</h3>
+                        <p style="text-align: center;">Immerse yourself in thrilling adventures and outdoor activities, designed to ignite your sense of adventure and exploration.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Connect With Us Section -->
+<section class="connect-with-us-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <img src="/images/logo-removebg-preview.png" alt="">
+                <h2 class="section-title">Connect With Us</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <p>Better to see something once <br>than hear about it a thousand times</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="input-group mb-3">
+                    <input type="email" class="form-control" placeholder="Enter your email">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="button">Join with us</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<!-- Footer -->
+<footer class="footer-section">
+    <div class="container">
+        <!-- Social Media Links -->
+        <div class="row justify-content-center mb-4">
+            <div class="col-md-4 text-center">
+                <img src="/images/logo-removebg-preview.png" alt=""><br>
+                <p>We believe in building a strong relationship with our clients by maintaining transparency with respect to quality service as well as safety.</p>
+                <br>
+                <h5>Connect with us</h5>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <!-- Company Information, Useful Links, and Contact -->
+        <div class="row text-center">
+            <!-- Company Information -->
+            <div class="col-md-4 mb-4">
+                <h5>About Us</h5>
+                <p>Our Travel Agency is dedicated to providing unforgettable travel experiences that immerse our clients in the beauty of the natural world. Explore the world with confidence and let us be your guide to unforgettable adventures.</p>
+            </div>
+            <!-- Useful Links -->
+            <div class="col-md-4 mb-4 useful-links">
+                <h5>Useful Links</h5>
+                <p><a href="#" class="text-reset">Home</a></p>
+                <p><a href="#Tours" class="text-reset">Tours</a></p>
+                <p><a href="#Treks" class="text-reset">Treks</a></p>
+                <p><a href="#dest" class="text-reset">Destinations</a></p>
+                <p><a href="#gallary" class="text-reset">Gallary</a></p>
+            </div>
+            <!-- Contact Information -->
+            <div class="col-md-4 mb-4">
+                <h5>Contact</h5>
+                <p><i class="fas fa-map-marker-alt"></i> 426 Vrindavan Complex, Vasna Rd,Ahmedabad,380008</p>
+                <p><i class="fas fa-envelope"></i> help@bharattravel.com</p>
+                <p><i class="fas fa-phone"></i> +91 6355664142</p>
+            </div>
+        </div>
+        <!-- Bottom Footer -->
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <p>&copy; 2024 Bharat Travel Agency. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+</body>
+</html>

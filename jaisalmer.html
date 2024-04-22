@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>JAISALMER</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Font Awesome CDN link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="shortcut icon" href="/images/Blue_Minimalist_Traveling_Logo_-removebg-preview.png" type="image/x-icon">
+  <style>
+    /* Global styles */
+    body {
+      background-color: #f9f9f9;
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Navbar styles */
+    .navbar {
+      background-image: url('/images/beachsubpage.jpg');
+      background-size: cover;
+      background-position: center;
+      font-family: "Poppins", sans-serif;
+      position: relative;
+      width: 100%;
+      height: 280px;
+    }
+
+    /* Navbar brand image */
+    .navbar-brand img {
+      margin-left: 50px;
+    }
+
+    /* Navbar links */
+    .navbar-nav {
+      margin: 0 auto;
+    }
+
+    .navbar-toggler {
+      border: none;
+    }
+
+    .navbar-nav .nav-link {
+      padding: 8px 16px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      transition: background-color 0.3s ease;
+      background-color: black;
+    }
+
+    .nav-link:hover {
+      color: orange;
+    }
+
+    .navbar-toggler-icon {
+      background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="black" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
+      width: 30px;
+      height: 30px;
+    }
+
+    .login-btn {
+      background-color: black;
+      color: white;
+      /* Adjust text color to be darker */
+      border: 1px solid #000;
+      /* Adjust border color to be darker */
+      padding: 15px 30px;
+      border-radius: 30px;
+    }
+
+    .login-btn:active,
+    .login-btn:focus {
+      background-color: black;
+      color: white;
+      /* Adjust text color to be darker */
+      border: 1px solid #000;
+      /* Adjust border color to be darker */
+    }
+
+    /* Page content */
+    .container-fluid {
+      padding: 20px;
+    }
+
+    .page-title {
+      text-align: center;
+      font-size: 32px;
+      font-weight: bold;
+      color: black;
+      margin-top: 30px;
+    }
+
+    .overview-text {
+      font-size: 18px;
+      line-height: 1.6;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
+    }
+
+    .card {
+      margin-top: 20px;
+      background-color: whitesmoke;
+      color: black;
+      font-weight: bold;
+      border: 2px solid black;
+      border-radius: 15px;
+    }
+
+    .book-now {
+      background-color: orange;
+      color: white;
+      border: none;
+      padding: 10px 30px;
+      font-size: 18px;
+    }
+
+    /*Itinerary*/
+    .enquire {
+      margin-left: 650px;
+    }
+    @media screen and (min-width:485px) and (max-width:992px) {
+      .enquire{
+        margin-left: 375px;
+      }
+    }
+    @media screen and (max-width:485px) {
+      .enquire{
+        margin-left: 275px;
+      }
+    }
+
+    .Itinerary-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 25px;
+      font-weight: bold;
+      color: black;
+      margin-bottom: 30px;
+    }
+
+    .Itinerary-description {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 15px;
+      font-weight: bold;
+      color: grey;
+      padding-top: 10px;
+      margin-bottom: 0;
+    }
+
+    .secondImg {
+      width: 100%;
+      height: auto;
+      border-radius: 20px;
+      margin-top: 20px;
+    }
+
+    /* Highlights card */
+    .highlights-card {
+      margin-top: 20px;
+      background-color: #ffffff;
+      color: black;
+      font-weight: bold;
+      border: 2px solid black;
+      border-radius: 15px;
+    }
+
+    .highlights-card .card-title {
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .highlights-card .card-text {
+      font-size: 16px;
+      line-height: 1.6;
+      text-align: left;
+      max-width: 80%;
+      margin: 0 auto;
+    }
+
+    /* Footer Section */
+    .footer-section {
+      background-color: black;
+      color: white;
+      padding: 50px 0;
+    }
+
+    .footer-section img {
+      display: block;
+      margin: 0 auto;
+      width: 100px;
+      height: 100px;
+    }
+
+    .social-links {
+      margin-bottom: 20px;
+    }
+
+    .social-links a {
+      display: inline-block;
+      margin-right: 10px;
+      color: white;
+      font-size: 24px;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      background-color: black;
+      border: 2px solid black;
+      transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+      text-decoration: none;
+      /* Remove underline */
+    }
+
+    .social-links a:hover {
+      background-color: #ff6600;
+      border-color: #ff6600;
+      color: black;
+    }
+
+    .useful-links a {
+      text-decoration: none;
+      /* Remove underline */
+      transition: background-color 0.3s ease;
+    }
+
+    .useful-links a:hover {
+      font-weight: bold;
+    }
+
+    .footer-section h5 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .footer-section p {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    /* Bottom Footer */
+    .footer-section .row:last-child {
+      margin-top: 30px;
+    }
+
+    /* Responsive styles */
+    @media (max-width: 991px) {
+
+      /* Navbar styles for smaller screens */
+      .navbar {
+        height: auto;
+      }
+
+      .navbar-toggler {
+        background-color: white;
+        position: absolute;
+        top: 50px;
+        right: 10px;
+        z-index: 1002;
+      }
+
+      .login-btn {
+        background-color: black;
+        position: absolute;
+        top: 45px;
+        right: 25%;
+        transform: translateX(50%);
+        z-index: 1001;
+      }
+
+      .navbar-collapse {
+        background-color: rgba(0, 0, 0, 0.5);
+        margin-top: 60px;
+      }
+
+      .navbar-nav .nav-link {
+        color: white;
+        padding: 10px 15px;
+        font-size: 16px;
+      }
+
+      .nav-link:hover {
+        color: orange;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .secondImg {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .overview-text {
+        padding: 10px;
+      }
+
+      .highlights-card .card-title {
+        font-size: 20px;
+      }
+
+      .highlights-card .card-text {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-transparent nav-md" id="kasol">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#"><img src="/images/logo.png" alt="" style="margin-left: 50px;"></a>
+      <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Tours</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Treks</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Reviews</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About Us</a>
+          </li>
+          <!-- Instagram Icon -->
+          <li class="nav-item insta-btn">
+            <a href="#" class="nav-link">
+              <i class="fab fa-instagram fa-lg"></i>
+            </a>
+          </li>
+          <!-- YouTube Icon -->
+          <li class="nav-item ytb-btn">
+            <a href="#" class="nav-link">
+              <i class="fab fa-youtube fa-lg"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- Login Button -->
+      <a href="/login.html" class="nav-link btn login-btn">Login</a>
+    </div>
+  </nav>
+  <!-- for kasol page -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-8">
+        <h1 class="page-title">ROYAL JAISALMER</h1>
+        <div class="container">
+          <i class="fa-solid fa-location-dot" style="font-size: large;"> Rajasthan</i>
+        </div>
+        <img class="secondImg" src="/images/jaisler.jpeg" alt="">
+        <hr>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3">
+              <img src="https://thrillblazers.in/assets/images/duraction.svg" alt="Duration Icon" class="image">
+              <h2>Duration</h2>
+              <p>05 days</p>
+            </div>
+            <div class="col-lg-3">
+              <img src="https://thrillblazers.in/assets/images/mdi_shoe-print.svg" alt="Tour-type Icon" class="image">
+              <h2>Tour-type</h2>
+              <p>Specific tour</p>
+            </div>
+            <div class="col-lg-3">
+              <img src="https://thrillblazers.in/assets/images/beatch-size.svg" alt="Batch-size Icon" class="image">
+              <h2>Batch-size</h2>
+              <p>35</p>
+            </div>
+            <div class="col-lg-3">
+              <img src="https://thrillblazers.in/assets/images/age-group.svg" alt="Age Group Icon" class="image">
+              <h2>Age Group</h2>
+              <p>18yrs-35yrs</p>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <h1 class="page-title">Overview</h1>
+        <div class="container">
+          <div class="overview-text">
+            <p>
+              Location: Jaisalmer is located in the heart of the Thar Desert in the western part of Rajasthan, India. It
+              is often referred to as the "Golden City" due to the golden sandstone used in its architecture.
+
+              History: Jaisalmer was founded in 1156 AD by Maharawal Jaisal Singh, a Rajput ruler. The city served as an
+              important trading center on the ancient Silk Route, connecting India with Central Asia, Persia, Egypt, and
+              Africa. Its strategic location made it a significant military outpost and trading hub.
+
+              Architecture: Royal Jaisalmer is renowned for its stunning architecture, characterized by intricately
+              carved havelis (mansions), forts, temples, and palaces made of golden sandstone. The most famous landmark
+              is the Jaisalmer Fort, also known as Sonar Quila (Golden Fort), a UNESCO World Heritage Site that
+              dominates the city's skyline.
+
+              Attractions: Besides the Jaisalmer Fort, other popular attractions in Royal Jaisalmer include:
+
+              Patwon Ki Haveli: A cluster of five elaborately decorated havelis constructed by wealthy Jain merchants.
+              Gadisar Lake: An artificial reservoir surrounded by temples, ghats, and chhatris (cenotaphs), offering
+              scenic views and boating opportunities.
+              Desert Safari: Visitors can enjoy camel safaris or jeep tours into the Thar Desert to experience the
+              desert landscape, sand dunes, and traditional Rajasthani culture.
+              Culture: Jaisalmer has a vibrant cultural scene, with its rich heritage reflected in its folk music,
+              dance, art, and festivals. The city hosts several cultural events, including the Desert Festival, which
+              showcases Rajasthani folk music, dance performances, camel races, and traditional attire.
+
+              Tourism: Royal Jaisalmer is a popular tourist destination, attracting visitors from around the world who
+              come to explore its historical sites, experience desert life, shop for handicrafts and textiles, and savor
+              Rajasthani cuisine.
+
+              Overall, Royal Jaisalmer is a captivating destination that offers a unique blend of history, culture, and
+              natural beauty, making it a must-visit destination for travelers seeking an authentic Rajasthani
+              experience.
+            </p>
+          </div>
+        </div>
+        <hr>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              <h1 style="text-align: left;font-weight: bolder;">Itinerary <a href="/login.html"class="btn btn-outline-warning enquire">Enquire Now</a>
+              </h1>
+            </div>
+
+            <div class="col-md-12">
+              <div class="row">
+                <div class="col-md-6">
+                  <br>
+                  <h2 class="Itinerary-title">DAY 01: THE GOLDEN CITY TOUR</h2>
+                  <img class="secondImg"
+                    src="/Subpage-images/jaisalmer/daY-1.jpg"
+                    alt="">
+                  <ul>
+                    <li class="Itinerary-description">• Reach Jaisalmer in the Morning.</li>
+                    <li class="Itinerary-description">• Meeting point: Bus station/Railway station/Airport 11 AM.</li>
+                    <li class="Itinerary-description">• Welcome drink on arrival at the hotel.</li>
+                    <li class="Itinerary-description">• After having a welcome drink and refreshment, get set to go for ‘THE GOLDEN CITY TOUR’.</li>
+                    <li class="Itinerary-description">• SIGHTSEEING: Golden Fort, Salim Singh & Patwa Havelis, Gadisar Lake.</li>
+                    <li class="Itinerary-description">• After sightseeing, enjoy some free time at the hotel.</li>
+                    <li class="Itinerary-description">• Later, you can spend some time at the poolside.</li>
+                    <li class="Itinerary-description">• NIGHT STAY: 3 STAR HOTEL.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-12">
+              <div class="row">
+                <div class="col-md-6">
+                  <br>
+                  <h2 class="Itinerary-title">DAY 02: DESERT CAMPING DAY</h2>
+                  <img class="secondImg"
+                    src="/Subpage-images/jaisalmer/day-2.webp"
+                    alt="">
+                  <ul>
+                    <li class="Itinerary-description">• After having an early breakfast, we will leave for the most awaited thing: DESERT CAMPING. You will be fantasizing the most beautiful creations of God as you walk across the Desert with lots of ups and downs in SAM SAND DUNES.</li>
+                    <li class="Itinerary-description">• You will be welcomed by TIKA with SHAHI THAATH.</li>
+                    <li class="Itinerary-description">• THRILLER: CAMEL SAFARI, DJ PARTY, FOLK DANCE WITH BONFIRE, RAJASTHANI LOCAL FOOD, NIGHT TRAIL.</li>
+                    <li class="Itinerary-description">• ON ROUTE SIGHTSEEING: KULDHARA VILLAGE – A HAUNTED VILLAGE, SAM SAND DUNES, BADABAGH.</li>
+                    <li class="Itinerary-description">• After trekking, you will enjoy a fascinating campfire along with DJ music.</li>
+                    <li class="Itinerary-description">• NIGHT STAY: ROYAL SWISS TENT.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-12">
+              <div class="row">
+                <div class="col-md-6">
+                  <br>
+                  <h2 class="Itinerary-title">DAY 03: EXPLORING LOCAL CULTURE</h2>
+                  <img class="secondImg"
+                    src="/Subpage-images/jaisalmer/day-3.png"
+                    alt="Day 03">
+                  <ul>
+                    <li class="Itinerary-description">Start your day with a hearty breakfast at the hotel.</li>
+                    <li class="Itinerary-description"> Embark on a guided tour to explore the local culture and heritage of Jaisalmer.</li>
+                    <li class="Itinerary-description"> Visit the Jaisalmer Fort, also known as the Golden Fort, an iconic landmark of the city.</li>
+                    <li class="Itinerary-description">Explore the intricate architecture and rich history of Salim Singh ki Haveli and Patwa ki Haveli.</li>
+                    <li class="Itinerary-description"> Take a leisurely stroll around Gadisar Lake, a picturesque spot surrounded by temples and ghats.</li>
+                    <li class="Itinerary-description"> Enjoy a delicious lunch at a local restaurant, savoring traditional Rajasthani cuisine.</li>
+                    <li class="Itinerary-description"> In the afternoon, delve deeper into the local culture with visits to craft markets and artisan workshops.</li>
+                    <li class="Itinerary-description"> Attend a cultural performance showcasing folk music and dance in the evening.</li>
+                    <li class="Itinerary-description"> Return to your hotel for a comfortable overnight stay.</li>
+                    <li class="Itinerary-description"> NIGHT STAY: 3 STAR HOTEL</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            
+            <div class="col-md-12">
+              <div class="row">
+                <div class="col-md-6">
+                  <br>
+                  <h2 class="Itinerary-title">DAY 04: ADVENTURE IN THE THAR DESERT</h2>
+                  <img class="secondImg"
+                    src="/Subpage-images/jaisalmer/day-4.jpg"
+                    alt="Day 04">
+                  <ul>
+                    <li class="Itinerary-description"> After an early breakfast, gear up for an exciting day of desert adventure.</li>
+                    <li class="Itinerary-description">Depart for a thrilling Jeep Safari through the vast expanse of the Thar Desert, exploring its rugged terrain and unique ecosystem.</li>
+                    <li class="Itinerary-description">Encounter the mesmerizing landscape of sand dunes as you traverse through the desert, capturing stunning views along the way.</li>
+                    <li class="Itinerary-description">Visit the abandoned village of Kuldhara, shrouded in mystery and folklore, and learn about its intriguing history.</li>
+                    <li class="Itinerary-description">Experience the thrill of camel riding as you embark on a camel safari across the golden sands of the desert.</li>
+                    <li class="Itinerary-description">Enjoy a traditional Rajasthani lunch amidst the serene surroundings of the desert, relishing authentic flavors under the open sky.</li>
+                    <li class="Itinerary-description">Return to the desert campsite for an evening filled with entertainment, including folk dance performances around a bonfire.</li>
+                    <li class="Itinerary-description">Indulge in a delectable dinner featuring Rajasthani delicacies, served under the starlit sky, creating an unforgettable dining experience.</li>
+                    <li class="Itinerary-description">Spend the night in luxury Swiss tents, equipped with modern amenities, for a comfortable and memorable stay in the desert.</li>
+                    <li class="Itinerary-description">NIGHT STAY: ROYAL SWISS TENT</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            
+            <div class="col-md-12">
+              <div class="row">
+                <div class="col-md-6">
+                  <br>
+                  <h2 class="Itinerary-title">DAY 05: DEPARTURE DAY</h2>
+                  <img class="secondImg"
+                    src="/Subpage-images/jaisalmer/day-5.jpg"
+                    alt="Day 05">
+                  <ul>
+                    <li class="Itinerary-description">Begin your day with a leisurely breakfast at the hotel, savoring the last moments of your stay in Jaisalmer.</li>
+                    <li class="Itinerary-description"> Check-out from the hotel and bid farewell to the city as you prepare for your departure.</li>
+                    <li class="Itinerary-description"> Depending on your travel arrangements, you may have some free time to explore the city further or indulge in last-minute souvenir shopping.</li>
+                    <li class="Itinerary-description"> Take this opportunity to visit any attractions or landmarks that you may have missed during your stay.</li>
+                    <li class="Itinerary-description">Later, transfer to the airport, railway station, or bus station for your onward journey.</li>
+                    <li class="Itinerary-description">Depart from Jaisalmer with fond memories of your desert adventure and cultural exploration.</li>
+                    <li class="Itinerary-description">Your tour concludes here. Thank you for choosing us as your travel partner!</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            
+          </div>
+        </div>
+      </div>
+          <div class="col-lg-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title text-center" style="color: black; font-size: x-large;">Starting from
+                  <b>₹15,000.00</b>
+                </h5><br>
+                <div class="card-text">
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <p class="text-center">Meals Included:</p>
+                      <ul class="list-unstyled" style="text-align: center;">
+                        <li>Breakfast</li>
+                        <li>Lunch</li>
+                        <li>Dinner</li>
+                      </ul>
+                    </div>
+                    <div class="col-lg-6">
+                      <p class="text-center">Activities:</p>
+                      <ul class="list-unstyled" style="text-align: center;">
+                        <li>Campfire</li>
+                        <li>Trekking</li>
+                        <li>Adventure Sports</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-center">
+                  <a href="/login.html" class="btn btn-primary book-now">Book Now</a>
+                </div>
+              </div>
+            </div>
+            <div class="card highlights-card">
+              <div class="card-body">
+                <h5 class="card-title text-center" style="color: black; font-size: x-large;">Highlights</h5>
+                <div class="card-text" style="white-space: pre-line;">
+                  <!-- Add your highlights content here -->
+                  <p>
+                    Days : 5 <br>
+                    Theme : Rajputana Style Camping <br>
+                    Best time : September to February <br>
+                    Start Point : Jaisalmer <br>
+                    End Point : Jaisalmer <br>
+                    Route : Jaisalmer – Sightseeing – Desert Camping – Jaisalmer <br>
+                    Meal plan : MAP (Breakfast & Dinner) <br>
+                    Stay : 1N Jaisalmer Hotel – 1N Desert Camping <br>
+                    Who Can Join : GROUP OF FRIENDS/FAMILY
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!--Footer-->
+  <!-- Footer -->
+  <footer class="footer-section">
+    <div class="container">
+      <!-- Social Media Links -->
+      <div class="row justify-content-center mb-4">
+        <div class="col-md-4 text-center">
+          <img src="/images/logo-removebg-preview.png" alt=""><br>
+          <p>We believe in building a strong relationship with our clients by maintaining transparency with respect
+            to quality service as well as safety.</p>
+          <br>
+          <h5>Connect with us</h5>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+      <!-- Company Information, Useful Links, and Contact -->
+      <div class="row text-center">
+        <!-- Company Information -->
+        <div class="col-md-4 mb-4">
+          <h5>About Us</h5>
+          <p>Our Travel Agency is dedicated to providing unforgettable travel experiences that immerse our clients
+            in the beauty of the natural world. Explore the world with confidence and let us be your guide to
+            unforgettable adventures.</p>
+        </div>
+        <!-- Useful Links -->
+        <div class="col-md-4 mb-4 useful-links">
+          <h5>Useful Links</h5>
+          <p><a href="/index.html" class="text-reset">Home</a></p>
+          <p><a href="#" class="text-reset">Destinations</a></p>
+          <p><a href="#" class="text-reset">Treks</a></p>
+          <p><a href="#" class="text-reset">Help</a></p>
+        </div>
+        <!-- Contact Information -->
+        <div class="col-md-4 mb-4">
+          <h5>Contact</h5>
+          <p><i class="fas fa-map-marker-alt"></i> 426 Vrindavan Complex, Vasna Rd,Ahmedabad,380008</p>
+          <p><i class="fas fa-envelope"></i> help@bharattravel.com</p>
+          <p><i class="fas fa-phone"></i> +91 6355664142</p>
+        </div>
+      </div>
+      <!-- Bottom Footer -->
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <p>&copy; 2024 Bharat Travel Agency. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="travel.js"></script>
+</body>
+
+</html>

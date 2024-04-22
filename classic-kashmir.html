@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Classic-Kashmir</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Font Awesome CDN link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="shortcut icon" href="/images/Blue_Minimalist_Traveling_Logo_-removebg-preview.png" type="image/x-icon">
+   <style>
+    /* Global styles */
+    body {
+      background-color: #f9f9f9;
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Navbar styles */
+    .navbar {
+      background-image: url('/images/beachsubpage.jpg');
+      background-size: cover;
+      background-position: center;
+      font-family: "Poppins", sans-serif;
+      position: relative;
+      width: 100%;
+      height: 280px;
+    }
+
+    /* Navbar brand image */
+    .navbar-brand img {
+      margin-left: 50px;
+    }
+
+    /* Navbar links */
+    .navbar-nav {
+      margin: 0 auto;
+    }
+
+    .navbar-toggler {
+      border: none;
+    }
+
+    .navbar-nav .nav-link {
+      padding: 8px 16px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      transition: background-color 0.3s ease;
+      background-color: black;
+    }
+
+    .nav-link:hover {
+      color: orange;
+    }
+
+    .navbar-toggler-icon {
+      background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="black" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
+      width: 30px;
+      height: 30px;
+    }
+
+    .login-btn {
+      background-color: black;
+      color: white; /* Adjust text color to be darker */
+      border: 1px solid #000; /* Adjust border color to be darker */
+      padding: 15px 30px;
+      border-radius: 30px;
+    }
+
+    .login-btn:active,
+    .login-btn:focus {
+      background-color: black;
+      color: white; /* Adjust text color to be darker */
+      border: 1px solid #000; /* Adjust border color to be darker */
+    }
+
+    /* Page content */
+    .container-fluid {
+      padding: 20px;
+    }
+
+    .page-title {
+      text-align: center;
+      font-size: 32px;
+      font-weight: bold;
+      color: black;
+      margin-top: 30px;
+    }
+
+    .overview-text {
+      font-size: 18px;
+      line-height: 1.6;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
+    }
+
+    .card {
+      margin-top: 20px;
+      background-color: whitesmoke;
+      color: black;
+      font-weight: bold;
+      border: 2px solid black;
+      border-radius: 15px;
+    }
+
+    .book-now {
+      background-color: orange;
+      color: white;
+      border: none;
+      padding: 10px 30px;
+      font-size: 18px;
+    }
+    /*Itinerary*/
+    .enquire{
+      margin-left: 650px;
+    }
+    @media screen and (min-width:485px) and (max-width:992px) {
+      .enquire{
+        margin-left: 375px;
+      }
+    }
+    @media screen and (max-width:485px) {
+      .enquire{
+        margin-left: 275px;
+      }
+    }
+    .Itinerary-title{
+      font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 30px;
+    }
+    .Itinerary-description{
+      font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: grey;
+    padding-top: 10px;
+    margin-bottom: 0;
+    }
+    .secondImg {
+      width: 100%;
+      height: auto;
+      border-radius: 20px;
+      margin-top: 20px;
+    }
+    /* Highlights card */
+    .highlights-card {
+      margin-top: 20px;
+      background-color: #ffffff;
+      color: black;
+      font-weight: bold;
+      border: 2px solid black;
+      border-radius: 15px;
+    }
+
+    .highlights-card .card-title {
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .highlights-card .card-text {
+      font-size: 16px;
+      line-height: 1.6;
+      text-align: left;
+      max-width: 80%;
+      margin: 0 auto;
+    }
+    /* Footer Section */
+.footer-section {
+    background-color: black;
+    color: white;
+    padding: 50px 0;
+}
+
+.footer-section img {
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+}
+
+.social-links {
+    margin-bottom: 20px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin-right: 10px;
+    color: white;
+    font-size: 24px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: black;
+    border: 2px solid black;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+    text-decoration: none; /* Remove underline */
+}
+.social-links a:hover {
+    background-color: #ff6600;
+    border-color: #ff6600;
+    color: black;
+}
+.useful-links a {
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s ease;
+}
+
+.useful-links a:hover {
+    font-weight: bold;
+}
+
+.footer-section h5 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.footer-section p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Bottom Footer */
+.footer-section .row:last-child {
+    margin-top: 30px;
+}
+    /* Responsive styles */
+    @media (max-width: 991px) {
+      /* Navbar styles for smaller screens */
+      .navbar {
+        height: auto;
+      }
+
+      .navbar-toggler {
+        background-color: white;
+        position: absolute;
+        top: 50px;
+        right: 10px;
+        z-index: 1002;
+      }
+
+      .login-btn {
+        background-color: black;
+        position: absolute;
+        top: 45px;
+        right: 25%;
+        transform: translateX(50%);
+        z-index: 1001;
+      }
+
+      .navbar-collapse {
+        background-color: rgba(0, 0, 0, 0.5);
+        margin-top: 60px;
+      }
+
+      .navbar-nav .nav-link {
+        color: white;
+        padding: 10px 15px;
+        font-size: 16px;
+      }
+
+      .nav-link:hover {
+        color: orange;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .secondImg {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .overview-text {
+        padding: 10px;
+      }
+
+      .highlights-card .card-title {
+        font-size: 20px;
+      }
+
+      .highlights-card .card-text {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-transparent nav-md" id="kasol">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#"><img src="/images/logo.png" alt="" style="margin-left: 50px;"></a>
+      <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Tours</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Treks</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Reviews</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About Us</a>
+          </li>
+          <!-- Instagram Icon -->
+          <li class="nav-item insta-btn">
+            <a href="#" class="nav-link">
+              <i class="fab fa-instagram fa-lg"></i>
+            </a>
+          </li>
+          <!-- YouTube Icon -->
+          <li class="nav-item ytb-btn">
+            <a href="#" class="nav-link">
+              <i class="fab fa-youtube fa-lg"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- Login Button -->
+      <a href="#" class="nav-link btn login-btn">Login</a>
+    </div>
+  </nav>
+  <!-- for kasol page -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-8">
+        <h1 class="page-title">Classic-Kashmir</h1>
+        <div class="container">
+          <i class="fa-solid fa-location-dot" style="font-size: large;"> KASHMIR</i>
+        </div>
+        <img class="secondImg" src="/images/classickashmircover.jpg" alt="">
+        <hr>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3">
+              <img src="/Subpage-images/duration.svg" alt="Duration Icon" class="image">
+              <h2>Duration</h2>
+              <p>10 days</p>
+            </div>
+            <div class="col-lg-3">
+              <img src="/Subpage-images/tour-type.svg" alt="Tour-type Icon" class="image">
+              <h2>Tour-type</h2>
+              <p>Trekking</p>
+            </div>
+            <div class="col-lg-3">
+              <img src="/Subpage-images/batch-size.svg" alt="Batch-size Icon" class="image">
+              <h2>Batch-size</h2>
+              <p>25</p>
+            </div>
+            <div class="col-lg-3">
+              <img src="/Subpage-images/age-group.svg" alt="Age Group Icon" class="image">
+              <h2>Age Group</h2>
+              <p>18yrs-35yrs</p>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <h1 class="page-title">Overview</h1>
+        <div class="container">
+            <div class="overview-text">
+                <p>Geography: Kashmir is a region located in the northern part of the Indian subcontinent, nestled in the western Himalayas. It is divided between India, Pakistan, and China-administered territories. The Indian-administered part, known as Jammu and Kashmir, is further divided into three regions: Jammu, the Kashmir Valley, and Ladakh.</p> <br>
+                 <p>Natural Beauty: Classic Kashmir is renowned for its stunning landscapes, including lush green valleys, snow-capped mountains, pristine lakes, and meandering rivers. The iconic Dal Lake in Srinagar, surrounded by houseboats and shikaras (traditional wooden boats), is a symbol of the region's natural beauty. </p> <br>
+                  <p>Tourist Attractions: Kashmir is home to several tourist attractions, including: Mughal Gardens: These beautifully manicured gardens, such as Shalimar Bagh, Nishat Bagh, and Chashme Shahi, were built by the Mughal emperors and are known for their terraced lawns, fountains, and floral designs. Gulmarg: A popular hill station known for its lush meadows, skiing slopes, and the Gulmarg Gondola, one of the highest cable cars in the world. Pahalgam: A picturesque town surrounded by pine forests and meadows, serving as a base for treks and excursions to nearby attractions like Betaab Valley and Aru Valley.</p>  <br>
+                  <p> Sonamarg: Known as the "Meadow of Gold," Sonamarg offers breathtaking views of glaciers, alpine lakes, and snow-capped peaks, making it a popular destination for trekking and camping. Cultural Heritage: Classic Kashmir has a rich cultural heritage influenced by its diverse population, including Kashmiri Muslims, Kashmiri Pandits, and other ethnic groups. The region is known for its traditional handicrafts such as pashmina shawls, Kashmiri carpets, papier-mâché items, and wood carvings. Cuisine: Kashmiri cuisine is known for its rich and aromatic flavors, with signature dishes like Rogan Josh (a spicy lamb curry),Dum Aloo (potatoes cooked in a spicy gravy), and Kahwa (a traditional green tea infused with spices and saffron).</p> <br>
+                 <p> The Classic Kashmir trip promises an unforgettable journey filled with wonder and discovery.
+                </p>
+            </div>
+            
+        </div>
+        <hr>
+        <div class="container-fluid">
+          <div class="row">
+              <div class="col-md-12">
+                  <h1 style="text-align: left;font-weight: bolder;">Itinerary <a href="/login.html" class="btn btn-warning enquire">Enquire Now</a></h1>
+              </div>
+              <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-6">
+                        <br>
+                        <h2 class="Itinerary-title">Day 01: Departure from Ahmedabad | Gandhinagar | Mumbai to Jammu | Udhampur</h2>
+                        <img class="secondImg" src="/Subpage-images/classic-kashmir/day-1.jpeg" alt="Departure from Ahmedabad | Gandhinagar | Mumbai to Jammu | Udhampur">
+                        <ul>
+                            <li><p class="Itinerary-description">Depart from Ahmedabad, Gandhinagar, or Mumbai for Jammu or Udhampur.</p></li>
+                            <li><p class="Itinerary-description">Meals: Onboard meals</p></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                      <br>
+                      <h2 class="Itinerary-title">Day 02: Reach at Jammu | Udhampur and Depart for Srinagar</h2>
+                      <img class="secondImg" src="/Subpage-images/classic-kashmir/day-2.jpeg" alt="Reach at Jammu | Udhampur and Depart for Srinagar">
+                      <ul>
+                          <li><p class="Itinerary-description">Arrive at Jammu or Udhampur and depart for Srinagar.</p></li>
+                          <li><p class="Itinerary-description">Meals: Breakfast, Lunch & Dinner</p></li>
+                      </ul>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                      <br>
+                      <h2 class="Itinerary-title">Day 03: Srinagar Local Sightseeing</h2>
+                      <img class="secondImg" src="/Subpage-images/classic-kashmir/day-3.jpeg" alt="Srinagar Local Sightseeing">
+                      <ul>
+                          <li><p class="Itinerary-description">Explore the local attractions of Srinagar, including Mughal Gardens, Dal Lake, and Nishat Bagh.</p></li>
+                          <li><p class="Itinerary-description">Visit Shankaracharya Temple and Hazratbal Shrine for spiritual experiences.</p></li>
+                          <li><p class="Itinerary-description">Enjoy a Shikara ride on Dal Lake and experience the charm of floating markets.</p></li>
+                          <li><p class="Itinerary-description">Meals: Breakfast, Lunch & Dinner</p></li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                    <br>
+                    <h2 class="Itinerary-title">Day 04: Srinagar to Gulmarg and Gulmarg Sightseeing</h2>
+                    <img class="secondImg" src="/Subpage-images/classic-kashmir/day-4.jpeg" alt="Srinagar to Gulmarg and Gulmarg Sightseeing">
+                    <ul>
+                        <li><p class="Itinerary-description">Travel from Srinagar to Gulmarg, known as the 'Meadow of Flowers'.</p></li>
+                        <li><p class="Itinerary-description">Explore the scenic beauty of Gulmarg and enjoy activities like Gondola rides, horse riding, and golfing.</p></li>
+                        <li><p class="Itinerary-description">Visit attractions such as the Gulmarg Golf Course, St. Mary's Church, and Khilanmarg.</p></li>
+                        <li><p class="Itinerary-description">Meals: Breakfast, Lunch & Dinner</p></li>
+                    </ul>
+                </div>
+            </div>
+                
+            <div class="row">
+              <div class="col-md-6">
+                  <br>
+                  <h2 class="Itinerary-title">Day 05: Srinagar to Sonamarg and Sonamarg Sightseeing</h2>
+                  <img class="secondImg" src="/Subpage-images/classic-kashmir/day-5.jpg" alt="Srinagar to Sonamarg and Sonamarg Sightseeing">
+                  <ul>
+                      <li><p class="Itinerary-description">Depart from Srinagar to Sonamarg, known as the 'Meadow of Gold'.</p></li>
+                      <li><p class="Itinerary-description">Enjoy breathtaking views of the Himalayas and glaciers en route to Sonamarg.</p></li>
+                      <li><p class="Itinerary-description">Explore local attractions in Sonamarg such as Thajiwas Glacier, Nilagrad River, and Zoji-La Pass.</p></li>
+                      <li><p class="Itinerary-description">Meals: Breakfast, Lunch & Dinner</p></li>
+                  </ul>
+              </div>
+          </div>
+          
+          <div class="row">
+              <div class="col-md-6">
+                  <br>
+                  <h2 class="Itinerary-title">Day 06: Sonamarg to Srinagar / Houseboat Day</h2>
+                  <img class="secondImg" src="/Subpage-images/classic-kashmir/day-6.png" alt="Sonamarg to Srinagar / Houseboat Day">
+                  <ul>
+                      <li><p class="Itinerary-description">Return from Sonamarg to Srinagar.</p></li>
+                      <li><p class="Itinerary-description">Experience a serene day on a houseboat in Dal Lake, Srinagar.</p></li>
+                      <li><p class="Itinerary-description">Enjoy Shikara rides, explore floating markets, and witness the beauty of the surrounding Mughal gardens.</p></li>
+                      <li><p class="Itinerary-description">Meals: Breakfast, Lunch & Dinner</p></li>
+                  </ul>
+              </div>
+          </div>
+          
+          <div class="row">
+              <div class="col-md-6">
+                  <br>
+                  <h2 class="Itinerary-title">Day 07: Pahalgam Sightseeing</h2>
+                  <img class="secondImg" src="/Subpage-images/classic-kashmir/day-7.jpeg" alt="Pahalgam Sightseeing">
+                  <ul>
+                      <li><p class="Itinerary-description">Depart from Srinagar to Pahalgam, a picturesque town renowned for its scenic beauty.</p></li>
+                      <li><p class="Itinerary-description">Explore Betaab Valley, Aru Valley, Chandanwari, and other attractions in Pahalgam.</p></li>
+                      <li><p class="Itinerary-description">Enjoy activities like pony rides, nature walks, and river rafting (optional).</p></li>
+                      <li><p class="Itinerary-description">Meals: Breakfast, Lunch & Dinner</p></li>
+                  </ul>
+              </div>
+          </div>
+          
+          <div class="row">
+              <div class="col-md-6">
+                  <br>
+                  <h2 class="Itinerary-title">Day 08: Pahalgam Unexplored Trek</h2>
+                  <img class="secondImg" src="/Subpage-images/classic-kashmir/day-8.jpg" alt="Pahalgam Unexplored Trek">
+                  <ul>
+                      <li><p class="Itinerary-description">Embark on an adventurous trek to explore the unexplored trails and scenic beauty of Pahalgam.</p></li>
+                      <li><p class="Itinerary-description">Discover hidden gems, lush meadows, and pristine streams along the trekking route.</p></li>
+                      <li><p class="Itinerary-description">Immerse yourself in the tranquility of nature and capture breathtaking views of the surrounding landscapes.</p></li>
+                      <li><p class="Itinerary-description">Meals: Breakfast, Lunch & Dinner</p></li>
+                  </ul>
+              </div>
+          </div>
+          
+          <div class="row">
+              <div class="col-md-6">
+                  <br>
+                  <h2 class="Itinerary-title">Day 09: Departure for Hometown</h2>
+                  <img class="secondImg" src="/Subpage-images/classic-kashmir/day-9.jpg" alt="Departure for Hometown">
+                  <ul>
+                      <li><p class="Itinerary-description">Check out from the hotel in Srinagar.</p></li>
+                      <li><p class="Itinerary-description">Depart for your hometown with cherished memories of your Kashmir trip.</p></li>
+                      <li><p class="Itinerary-description">Meals: Breakfast or Lunch (depending on departure time)</p></li>
+                  </ul>
+              </div>
+          </div>
+          
+              </div>
+          </div>
+        </div>
+          
+        
+      </div>
+      <div class="col-lg-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title text-center" style="color: black; font-size: x-large;">Starting from <b>₹19,999.00</b></h5><br>
+            <div class="card-text">
+              <div class="row">
+                <div class="col-lg-6">
+                  <p class="text-center">Meals Included:</p>
+                  <ul class="list-unstyled" style="text-align: center;">
+                    <li>Breakfast</li>
+                    <li>Lunch</li>
+                    <li>Dinner</li>
+                  </ul>
+                </div>
+                <div class="col-lg-6">
+                  <p class="text-center">Activities:</p>
+                  <ul class="list-unstyled"  style="text-align: center;">
+                    <li>Campfire</li>
+                    <li>Trekking</li>
+                    <li>Adventure Sports</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="text-center">
+              <a href="/login.html" class="btn btn-primary book-now">Book Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="card highlights-card">
+          <div class="card-body">
+            <h5 class="card-title text-center" style="color: black; font-size: x-large;">Highlights</h5>
+            <div class="card-text" style="white-space: pre-line;">
+              <!-- Add your highlights content here -->
+              <p>
+                DAY 01 : DEPARTURE FROM AHEMDABAD | GANDHINAGAR | MUMBAI |TO JAMMU | UDHAMPUR <br>
+                DAY 02 : REACH AT JAMMU | UDHAMPUR AND DEPART FOR SRINAGAR <br>
+                DAY 03 : SRINAGAR LOCAL SIGHTSEEING <br>
+                DAY 04 : SRINAGAR TO GULMARG AND GULMARG SIGHTSEEING <br>
+                DAY 05 : SRINAGAR TO SONAMARG AND SONAMARG SIGHSEEING <br>
+                 DAY 06 : SONAMARG TO SRINAGAR / HOUSE BOAT DAY <br>
+                 DAY 07 : PAHALGAM SIGHTSEEING <br>
+                 DAT 08 : PAHALGAM UNEXPLORED TREK <br>
+                 DAY 09 : DEPART FOR HOME TOWN <br>
+                 DAY 10 : REACH HOME TOWN WITH BUNCH OF MEMORIES <br>
+
+
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  
+  <!--Footer-->
+  <!-- Footer -->
+<footer class="footer-section">
+  <div class="container">
+      <!-- Social Media Links -->
+      <div class="row justify-content-center mb-4">
+          <div class="col-md-4 text-center">
+              <img src="/images/logo-removebg-preview.png" alt=""><br>
+              <p>We believe in building a strong relationship with our clients by maintaining transparency with respect to quality service as well as safety.</p>
+              <br>
+              <h5>Connect with us</h5>
+              <div class="social-links">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-linkedin"></i></a>
+              </div>
+          </div>
+      </div>
+      <!-- Company Information, Useful Links, and Contact -->
+      <div class="row text-center">
+          <!-- Company Information -->
+          <div class="col-md-4 mb-4">
+              <h5>About Us</h5>
+              <p>Our Travel Agency is dedicated to providing unforgettable travel experiences that immerse our clients in the beauty of the natural world. Explore the world with confidence and let us be your guide to unforgettable adventures.</p>
+          </div>
+          <!-- Useful Links -->
+          <div class="col-md-4 mb-4 useful-links">
+              <h5>Useful Links</h5>
+              <p><a href="/index.html" class="text-reset">Home</a></p>
+              <p><a href="#" class="text-reset">Destinations</a></p>
+              <p><a href="#" class="text-reset">Treks</a></p>
+              <p><a href="#" class="text-reset">Help</a></p>
+          </div>
+          <!-- Contact Information -->
+          <div class="col-md-4 mb-4">
+              <h5>Contact</h5>
+              <p><i class="fas fa-map-marker-alt"></i> 426 Vrindavan Complex, Vasna Rd,Ahmedabad,380008</p>
+              <p><i class="fas fa-envelope"></i> help@bharattravel.com</p>
+              <p><i class="fas fa-phone"></i> +91 6355664142</p>
+          </div>
+      </div>
+      <!-- Bottom Footer -->
+      <div class="row">
+          <div class="col-md-12 text-center">
+              <p>&copy; 2024 Bharat Travel Agency. All rights reserved.</p>
+          </div>
+      </div>
+  </div>
+</footer>
+<script src="travel.js"></script>
+</body>
+</html>

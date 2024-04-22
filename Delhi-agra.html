@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <title>DELHI-AGRA</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Font Awesome CDN link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="/images/Blue_Minimalist_Traveling_Logo_-removebg-preview.png" type="image/x-icon">
+    <style>
+      /* Global styles */
+      body {
+        background-color: #f9f9f9;
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+  
+      /* Navbar styles */
+      .navbar {
+        background-image: url('/images/beachsubpage.jpg');
+        background-size: cover;
+        background-position: center;
+        font-family: "Poppins", sans-serif;
+        position: relative;
+        width: 100%;
+        height: 280px;
+      }
+  
+      /* Navbar brand image */
+      .navbar-brand img {
+        margin-left: 50px;
+      }
+  
+      /* Navbar links */
+      .navbar-nav {
+        margin: 0 auto;
+      }
+  
+      .navbar-toggler {
+        border: none;
+      }
+  
+      .navbar-nav .nav-link {
+        padding: 8px 16px;
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        transition: background-color 0.3s ease;
+        background-color: black;
+      }
+  
+      .nav-link:hover {
+        color: orange;
+      }
+  
+      .navbar-toggler-icon {
+        background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="black" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
+        width: 30px;
+        height: 30px;
+      }
+  
+      .login-btn {
+        background-color: black;
+        color: white; /* Adjust text color to be darker */
+        border: 1px solid #000; /* Adjust border color to be darker */
+        padding: 15px 30px;
+        border-radius: 30px;
+      }
+  
+      .login-btn:active,
+      .login-btn:focus {
+        background-color: black;
+        color: white; /* Adjust text color to be darker */
+        border: 1px solid #000; /* Adjust border color to be darker */
+      }
+  
+      /* Page content */
+      .container-fluid {
+        padding: 20px;
+      }
+  
+      .page-title {
+        text-align: center;
+        font-size: 32px;
+        font-weight: bold;
+        color: black;
+        margin-top: 30px;
+      }
+  
+      .overview-text {
+        font-size: 18px;
+        line-height: 1.6;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+      }
+  
+      .card {
+        margin-top: 20px;
+        background-color: whitesmoke;
+        color: black;
+        font-weight: bold;
+        border: 2px solid black;
+        border-radius: 15px;
+      }
+  
+      .book-now {
+        background-color: orange;
+        color: white;
+        border: none;
+        padding: 10px 30px;
+        font-size: 18px;
+      }
+      /*Itinerary*/
+      .enquire{
+        margin-left: 650px;
+      }
+      @media screen and (min-width:485px) and (max-width:992px) {
+      .enquire{
+        margin-left: 375px;
+      }
+    }
+    @media screen and (max-width:485px) {
+      .enquire{
+        margin-left: 275px;
+      }
+    }
+      .Itinerary-title{
+        font-family: 'Montserrat', sans-serif;
+      font-size: 25px;
+      font-weight: bold;
+      color: black;
+      margin-bottom: 30px;
+      }
+      .Itinerary-description{
+        font-family: 'Montserrat', sans-serif;
+      font-size: 15px;
+      font-weight: bold;
+      color: grey;
+      padding-top: 10px;
+      margin-bottom: 0;
+      }
+      .secondImg {
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+        margin-top: 20px;
+      }
+      /* Highlights card */
+      .highlights-card {
+        margin-top: 20px;
+        background-color: #ffffff;
+        color: black;
+        font-weight: bold;
+        border: 2px solid black;
+        border-radius: 15px;
+      }
+  
+      .highlights-card .card-title {
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+      }
+  
+      .highlights-card .card-text {
+        font-size: 16px;
+        line-height: 1.6;
+        text-align: left;
+        max-width: 80%;
+        margin: 0 auto;
+      }
+      /* Footer Section */
+  .footer-section {
+      background-color: black;
+      color: white;
+      padding: 50px 0;
+  }
+  
+  .footer-section img {
+      display: block;
+      margin: 0 auto;
+      width: 100px;
+      height: 100px;
+  }
+  
+  .social-links {
+      margin-bottom: 20px;
+  }
+  
+  .social-links a {
+      display: inline-block;
+      margin-right: 10px;
+      color: white;
+      font-size: 24px;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      background-color: black;
+      border: 2px solid black;
+      transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+      text-decoration: none; /* Remove underline */
+  }
+  .social-links a:hover {
+      background-color: #ff6600;
+      border-color: #ff6600;
+      color: black;
+  }
+  .useful-links a {
+      text-decoration: none; /* Remove underline */
+      transition: background-color 0.3s ease;
+  }
+  
+  .useful-links a:hover {
+      font-weight: bold;
+  }
+  
+  .footer-section h5 {
+      font-size: 24px;
+      margin-bottom: 20px;
+  }
+  
+  .footer-section p {
+      font-size: 16px;
+      margin-bottom: 10px;
+  }
+  
+  /* Bottom Footer */
+  .footer-section .row:last-child {
+      margin-top: 30px;
+  }
+      /* Responsive styles */
+      @media (max-width: 991px) {
+        /* Navbar styles for smaller screens */
+        .navbar {
+          height: auto;
+        }
+  
+        .navbar-toggler {
+          background-color: white;
+          position: absolute;
+          top: 50px;
+          right: 10px;
+          z-index: 1002;
+        }
+  
+        .login-btn {
+          background-color: black;
+          position: absolute;
+          top: 45px;
+          right: 25%;
+          transform: translateX(50%);
+          z-index: 1001;
+        }
+  
+        .navbar-collapse {
+          background-color: rgba(0, 0, 0, 0.5);
+          margin-top: 60px;
+        }
+  
+        .navbar-nav .nav-link {
+          color: white;
+          padding: 10px 15px;
+          font-size: 16px;
+        }
+  
+        .nav-link:hover {
+          color: orange;
+        }
+      }
+  
+      @media (max-width: 576px) {
+        .secondImg {
+          margin-left: auto;
+          margin-right: auto;
+        }
+  
+        .overview-text {
+          padding: 10px;
+        }
+  
+        .highlights-card .card-title {
+          font-size: 20px;
+        }
+  
+        .highlights-card .card-text {
+          font-size: 14px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent nav-md" id="kasol">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#"><img src="/images/logo.png" alt="" style="margin-left: 50px;"></a>
+        <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Tours</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Treks</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Reviews</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About Us</a>
+            </li>
+            <!-- Instagram Icon -->
+            <li class="nav-item insta-btn">
+              <a href="#" class="nav-link">
+                <i class="fab fa-instagram fa-lg"></i>
+              </a>
+            </li>
+            <!-- YouTube Icon -->
+            <li class="nav-item ytb-btn">
+              <a href="#" class="nav-link">
+                <i class="fab fa-youtube fa-lg"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- Login Button -->
+        <a href="/login.html" class="nav-link btn login-btn">Login</a>
+      </div>
+    </nav>
+    <!-- for kasol page -->
+    <div class="container-fluid" id="kasol" onclick="kasolTrip(this)">
+      <div class="row">
+        <div class="col-lg-8">
+          <h1 class="page-title">Delhi-Agra</h1>
+          <div class="container">
+            <i class="fa-solid fa-location-dot" style="font-size: large;">  Agra</i>
+          </div>
+          <img class="secondImg" src="/images/tajmahal-2.png" alt="">
+          <hr>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-3">
+                <img src="/Subpage-images/duration.svg" alt="Duration Icon" class="image">
+                <h2>Duration</h2>
+                <p>09 days</p>
+              </div>
+              <div class="col-lg-3">
+                <img src="/Subpage-images/tour-type.svg" alt="Tour-type Icon" class="image">
+                <h2>Tour-type</h2>
+                <p>Trekking</p>
+              </div>
+              <div class="col-lg-3">
+                <img src="/Subpage-images/batch-size.svg" alt="Batch-size Icon" class="image">
+                <h2>Batch-size</h2>
+                <p>25</p>
+              </div>
+              <div class="col-lg-3">
+                <img src="/Subpage-images/age-group.svg" alt="Age Group Icon" class="image">
+                <h2>Age Group</h2>
+                <p>18yrs-35yrs</p>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <h1 class="page-title">Overview</h1>
+          <div class="container">
+            <div class="overview-text">
+              <p>
+                Our Delhi Agra tour package will offer you the chance to explore the magical cities of Delhi and Agra. With our tour package, you can discover the world-famous attractions of the capital city of India such as the Red Fort, Raj Ghat, Qutub Minar, Jama Masjid, Rashtrapati Bhavan, and Parliament House. Our Delhi to Agra package will also allow you to invade some of the well-kept treasures of the city of Agra including the Agra Fort and the Taj Mahal. You will peacefully marvel at these brilliant architectural wonders and even take some amazing pictures with them. This reasonably-priced Delhi Agra tour package cost is best and totally budget-friendly. You will enjoy a comfortable stay, hygienic meals, and convenient transfers.
+              </p>
+            </div>
+          </div>
+          <hr>
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-12">
+                <h1 style="text-align: left;font-weight: bolder;">Itinerary <a href="/login.html" class="btn btn-outline-warning enquire">Enquire Now</a>
+                </h1>
+              </div>
+             
+              <div class="col-md-12">
+                <div class="row">
+                  <div class="col-md-6">
+                    <br>
+                    <h2 class="Itinerary-title">Day 1: Arriaval at Delhi (Via Train)</h2>
+                    <img class="secondImg" src="/Subpage-images/Delhi-agra/day-1.jpeg" alt="">
+                    <p class="Itinerary-description">Checking in hotel and refesh yourself.</p>
+                    <p class="Itinerary-description">Going to famous markets.</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <br>
+                    <h2 class="Itinerary-title">DAY 2: Sight seeing Tour of Delhi (VIA BUS)</h2>
+                    <img class="secondImg" src="/Subpage-images/Delhi-agra/day-2.jpg" alt="">
+                    
+                            <ul>
+                              <li><p class="Itinerary-description">Visiting India Gate,Red Fort and Raj Ghat.</p></li>
+                              <li><p class="Itinerary-description">Meals: Lunch &Dinner</p></li>
+                            </ul>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <br>
+                    <h2 class="Itinerary-title">DAY 3:Local Sightseeing  Of Delhi </h2>
+                    <img class="secondImg" src="/Subpage-images/Delhi-agra/day-3.webp" alt="">
+                    
+                            <ul>
+                              <li><p class="Itinerary-description">Visiting Jama Masjid, Rashtrapati Bhavan and Parliament</p></li>
+                              <li><p class="Itinerary-description">Meals: Breakfast, Lunch & Dinner </p></li>
+  
+                            </ul> 
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <br>
+                    <h2 class="Itinerary-title">DAY 4: Departing for Agra</h2>
+                    <img class="secondImg" src="/Subpage-images/Delhi-agra/day-4.webp" alt="">
+                    
+                            <ul>
+                              <li><p class="Itinerary-description">After having early breakfast ,we will depart for Agra.</p></li>
+                              <li><p class="Itinerary-description">Night staying at hotel and relax. </p></li>
+                              <li><p class="Itinerary-description">Meals: Breakfast, Lunch & Dinner </p></li>
+  
+                            </ul> 
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <br>
+                    <h2 class="Itinerary-title">DAY 5: Sight seeing of Agra</h2>
+                    <img class="secondImg" src="/Subpage-images/Delhi-agra/day-5.jpeg" alt="">
+                    
+                            <ul>
+                              <li><p class="Itinerary-description">Visiting Taj Mahal,Agra Fort and many other places</p></li>
+                              <li><p class="Itinerary-description">Meals: Breakfast, Lunch & Dinner </p></li>
+  
+                            </ul> 
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <br>
+                    <h2 class="Itinerary-title">DAY 6: Departure from Agra</h2>
+                    <img class="secondImg" src="/Subpage-images/Delhi-agra/day-6.jpg" alt="">
+                    
+                            <ul>
+                              <li><p class="Itinerary-description"> Wake up to your last day in Agra and enjoy your final breakfast in the city.</p></li>
+                              <li><p class="Itinerary-description"> Proceed on your onward journey towards home after enjoying a memorable holiday in North India with your Delhi Agra tour package.</p></li>
+                              <li><p class="Itinerary-description">Meals: Breakfast</p></li>
+  
+                            </ul> 
+                  </div>
+                </div>
+                
+                
+                
+                
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <div class="col-lg-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title text-center" style="color: black; font-size: x-large;">Starting from <b>₹25,000.00</b></h5><br>
+              <div class="card-text">
+                <div class="row">
+                  <div class="col-lg-6">
+                    <p class="text-center">Meals Included:</p>
+                    <ul class="list-unstyled" style="text-align: center;">
+                      <li>Breakfast</li>
+                      <li>Lunch</li>
+                      <li>Dinner</li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-6">
+                    <p class="text-center">Activities:</p>
+                    <ul class="list-unstyled"  style="text-align: center;">
+                      <li>Sight Seeing</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="text-center">
+                <a href="/login.html" class="btn btn-primary book-now">Book Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="card highlights-card">
+            <div class="card-body">
+              <h5 class="card-title text-center" style="color: black; font-size: x-large;">Highlights</h5>
+              <div class="card-text" style="white-space: pre-line;">
+                <!-- Add your highlights content here -->
+                <p>
+                    Explore the two most beautiful UNESCO World Heritage sites in India: Taj Mahal and Agra Fort <br>
+                    Visit the other two tombs - one has the body of Mughal emperor Akbar and the other was named 'Baby Taj' <br>
+                    Immerse yourself in Old Delhi's alleys bustling with street vendors, local markets and places of worship <br>
+                    Learn about India's history when you drive by the Parliament House and the India Gate along Rajpath (King's way)<br>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   
+    
+    <!--Footer-->
+    <!-- Footer -->
+  <footer class="footer-section">
+    <div class="container">
+        <!-- Social Media Links -->
+        <div class="row justify-content-center mb-4">
+            <div class="col-md-4 text-center">
+                <img src="/images/logo-removebg-preview.png" alt=""><br>
+                <p>We believe in building a strong relationship with our clients by maintaining transparency with respect to quality service as well as safety.</p>
+                <br>
+                <h5>Connect with us</h5>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <!-- Company Information, Useful Links, and Contact -->
+        <div class="row text-center">
+            <!-- Company Information -->
+            <div class="col-md-4 mb-4">
+                <h5>About Us</h5>
+                <p>Our Travel Agency is dedicated to providing unforgettable travel experiences that immerse our clients in the beauty of the natural world. Explore the world with confidence and let us be your guide to unforgettable adventures.</p>
+            </div>
+            <!-- Useful Links -->
+            <div class="col-md-4 mb-4 useful-links">
+                <h5>Useful Links</h5>
+                <p><a href="/index.html" class="text-reset">Home</a></p>
+                <p><a href="#" class="text-reset">Destinations</a></p>
+                <p><a href="#" class="text-reset">Treks</a></p>
+                <p><a href="#" class="text-reset">Help</a></p>
+            </div>
+            <!-- Contact Information -->
+            <div class="col-md-4 mb-4">
+                <h5>Contact</h5>
+                <p><i class="fas fa-map-marker-alt"></i> 426 Vrindavan Complex, Vasna Rd,Ahmedabad,380008</p>
+                <p><i class="fas fa-envelope"></i> help@bharattravel.com</p>
+                <p><i class="fas fa-phone"></i> +91 6355664142</p>
+            </div>
+        </div>
+        <!-- Bottom Footer -->
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <p>&copy; 2024 Bharat Travel Agency. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+  </footer>
+  <script src="travel.js"></script>
+  </body>
+  </html>
+  
+</body>
+</html>
